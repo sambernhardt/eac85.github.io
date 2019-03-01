@@ -1,47 +1,127 @@
 <!DOCTYPE html>
 <html>
-<title>Lawrenceville</title>
 <head>
-<link rel="stylesheet" type="text/css" href="cssStylesheet.css" />
+<title> Emery Chew </title>
+
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: whitesmoke;
+		}
+
+		.container img {
+			float: left;
+		}
+
+		.container {
+		  height: 100vh;
+		  width: 100%;
+		  position: relative;
+		  color: whitesmoke;
+		  font-family: Magenta;
+		  font-size: 1500%;
+		  background-color: #fee3a4;
+		  
+		}
+
+
+		.centered {
+		  position: relative;
+		  top: 20%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		}
+
+		.right {
+		 	position: absolute;
+  			top: 8px;
+  			right: 16px;	 
+		}
+
+		.nextButton {
+		 	position: absolute;
+  			top: 320px;
+  			right: 30px;	
+		  	background-color: white; 
+		  	border: solid 6px whitesmoke;
+		  	color: #fee3a4;
+		  	width:100px;
+  			height: 100px;
+		  	padding: 20px;
+		  	text-align: center;
+		  	text-decoration: none;
+		  	display: inline-block;
+		  	font-size: 40px;
+		  	cursor: pointer;
+		  	border-radius: 100%;
+		} 
+
+		.nextButton:hover {
+			border: solid 10px whitesmoke;
+		}
+
+		@font-face{
+			font-family: Magenta;
+			src: url("Magenta Demo.ttf");
+		}
+
+		#page{
+			display: none;
+			background-color:  #fee3a4;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+
+		.title {
+			font-family: Magenta;
+			font-size: 100px;
+			color:  #fee3a4;;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		nav {
+			text-align: center;
+		}
+
+		nav ul {
+		  list-style-type: none;
+		}
+
+		nav li {
+		  display: inline;
+		}
+
+	</style>
 </head>
-<style>
-
-background-image{
-	 -webkit-filter: grayscale(25%);
-	 opacity: 0.5;
-}
-
-body{
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('lawrenceville.jpg');
-}
-
-
-</style>
-
 <body>
-<nav style="background-color: white;"> 
-  <ul>
-  	<li><a href="thestory.html">the story</a></li>
-    <li><a href="weshopped.html">we shopped</a></li>
-    <li><a href="weate.html">we ate</a></li>
-    <li><a href="weplayed.html">we played</a></li>
-    <li><a href="location.html">location</a></li>
-    <li><a href="images.html">images</a></li>
-  </ul>
-  
-</nav>
-
-<header style = "font-size: 75px; color: black; text-align: center;">
-Lawrenceville of Pittsburgh
-</header>
+		<div id="container" class="container">
+	  		<img src="overalls.jpg" style="height: 100vh">
+	  		<div class="right">EmeryChew</div>
+	  		<button class="nextButton" id="nextHome"> <strong> > </strong> </button>
+		</div>
 
 
+		<div id="page">
+			<h1 class="title"> Emery Chew </h1> 
+			<nav> 
+				<ul>
+				  <li><a href="#home">Home</a></li>
+				  <li><a href="#news">News</a></li>
+				  <li><a href="#contact">Contact</a></li>
+				  <li><a href="#about">About</a></li>
+				</ul>
+			</nav>
+		</div>
 
 
+	
 </body>
+	<script type="text/javascript">
+		document.getElementById("nextHome").addEventListener("click", function(){
+				document.getElementById("container").style.display = "none";
+				document.getElementById("page").style.display = "inline";
+		})
+	</script>
 </html>
-
