@@ -20,7 +20,7 @@
 		  position: relative;
 		  color: whitesmoke;
 		  font-family: Magenta;
-		  font-size: 1500%;
+		  font-size: 20vw;
 		  background-color: #fee3a4;
 		  
 		}
@@ -66,6 +66,11 @@
 			src: url("Magenta Demo.ttf");
 		}
 
+		@font-face{
+			font-family: boldfont;
+			src: url("theboldfont.ttf");
+		}
+
 		#page{
 			display: none;
 			background-color:  #fee3a4;
@@ -83,6 +88,19 @@
 
 		nav {
 			text-align: center;
+			text-decoration: none;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: gray;
+			font-family: boldfont;
+		}
+
+		nav a:hover {
+			text-decoration: none;
+			color: #fee3a4;
+			font-family: boldfont;
 		}
 
 		nav ul {
@@ -90,6 +108,8 @@
 		}
 
 		nav li {
+		  padding-left: 10px;
+		  padding-right: 10px;
 		  display: inline;
 		}
 
