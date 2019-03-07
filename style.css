@@ -1,0 +1,110 @@
+body {
+			margin: 0px;
+			padding: 0px;
+			background-color: whitesmoke;
+		}
+
+		.container img {
+			float: left;
+		}
+
+		.container {
+		  height: 100vh;
+		  width: 100%;
+		  position: relative;
+		  color: whitesmoke;
+		  font-family: Magenta;
+		  font-size: 15vw;
+		  background-color: #fee3a4;
+		  
+		}
+
+
+		.centered {
+		  position: relative;
+		  top: 20%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		}
+
+		.right {
+		 	position: absolute;
+  			top: 8px;
+  			right: 16px;	 
+		}
+
+		.nextButton {
+		 	position: absolute;
+  			top: 320px;
+  			right: 30px;	
+		  	background-color: white; 
+		  	border: solid 6px whitesmoke;
+		  	color: #fee3a4;
+		  	width:100px;
+  			height: 100px;
+		  	padding: 20px;
+		  	text-align: center;
+		  	text-decoration: none;
+		  	display: inline-block;
+		  	font-size: 40px;
+		  	cursor: pointer;
+		  	border-radius: 100%;
+		} 
+
+		.nextButton:hover {
+			border: solid 10px whitesmoke;
+		}
+
+		@font-face{
+			font-family: Magenta;
+			src: url("Magenta Demo.ttf");
+		}
+
+		@font-face{
+			font-family: boldfont;
+			src: url("theboldfont.ttf");
+		}
+
+
+		.title {
+			font-family: Magenta;
+			font-size: 100px;
+			color:  #fee3a4;;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		nav {
+			text-align: center;
+			text-decoration: none;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: gray;
+			font-family: boldfont;
+		}
+
+		nav a:hover {
+			text-decoration: none;
+			color: #fee3a4;
+			font-family: boldfont;
+		}
+
+		nav ul {
+		  list-style-type: none;
+		}
+
+		nav li {
+		  padding-left: 10px;
+		  padding-right: 10px;
+		  display: inline;
+		}
+
+		.textbox {
+			text-align: left;
+			margin-left: 150px;
+			margin-right: 150px;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}

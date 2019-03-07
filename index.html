@@ -2,116 +2,10 @@
 <html>
 <head>
 <title> Emery Chew </title>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 	<style>
-		body {
-			margin: 0px;
-			padding: 0px;
-			background-color: whitesmoke;
-		}
 
-		.container img {
-			float: left;
-		}
-
-		.container {
-		  height: 100vh;
-		  width: 100%;
-		  position: relative;
-		  color: whitesmoke;
-		  font-family: Magenta;
-		  font-size: 20vw;
-		  background-color: #fee3a4;
-		  
-		}
-
-
-		.centered {
-		  position: relative;
-		  top: 20%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		}
-
-		.right {
-		 	position: absolute;
-  			top: 8px;
-  			right: 16px;	 
-		}
-
-		.nextButton {
-		 	position: absolute;
-  			top: 320px;
-  			right: 30px;	
-		  	background-color: white; 
-		  	border: solid 6px whitesmoke;
-		  	color: #fee3a4;
-		  	width:100px;
-  			height: 100px;
-		  	padding: 20px;
-		  	text-align: center;
-		  	text-decoration: none;
-		  	display: inline-block;
-		  	font-size: 40px;
-		  	cursor: pointer;
-		  	border-radius: 100%;
-		} 
-
-		.nextButton:hover {
-			border: solid 10px whitesmoke;
-		}
-
-		@font-face{
-			font-family: Magenta;
-			src: url("Magenta Demo.ttf");
-		}
-
-		@font-face{
-			font-family: boldfont;
-			src: url("theboldfont.ttf");
-		}
-
-		#page{
-			display: none;
-			background-color:  #fee3a4;
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-
-		.title {
-			font-family: Magenta;
-			font-size: 100px;
-			color:  #fee3a4;;
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		nav {
-			text-align: center;
-			text-decoration: none;
-		}
-
-		nav a {
-			text-decoration: none;
-			color: gray;
-			font-family: boldfont;
-		}
-
-		nav a:hover {
-			text-decoration: none;
-			color: #fee3a4;
-			font-family: boldfont;
-		}
-
-		nav ul {
-		  list-style-type: none;
-		}
-
-		nav li {
-		  padding-left: 10px;
-		  padding-right: 10px;
-		  display: inline;
-		}
 
 	</style>
 </head>
@@ -119,20 +13,8 @@
 		<div id="container" class="container">
 	  		<img src="overalls.JPG" style="height: 100vh">
 	  		<div class="right">EmeryChew</div>
-	  		<button class="nextButton" id="nextHome"> <strong> > </strong> </button>
-		</div>
-
-
-		<div id="page">
-			<h1 class="title"> Emery Chew </h1> 
-			<nav> 
-				<ul>
-				  <li><a href="#home">Home</a></li>
-				  <li><a href="#news">News</a></li>
-				  <li><a href="#contact">Contact</a></li>
-				  <li><a href="#about">About</a></li>
-				</ul>
-			</nav>
+	  		<button class="nextButton" id="nextHome"> <strong>
+	  		 > </strong> </button>
 		</div>
 
 
@@ -140,8 +22,7 @@
 </body>
 	<script type="text/javascript">
 		document.getElementById("nextHome").addEventListener("click", function(){
-				document.getElementById("container").style.display = "none";
-				document.getElementById("page").style.display = "inline";
+				window.location.href = './about.html';
 		})
 	</script>
 </html>
