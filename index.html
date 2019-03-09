@@ -3,26 +3,54 @@
 <head>
 <title> Emery Chew </title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 
 
 	</style>
 </head>
-<body>
-		<div id="container" class="container">
-	  		<img src="overalls.JPG" style="height: 100vh">
-	  		<div class="right">EmeryChew</div>
-	  		<button class="nextButton" id="nextHome"> <strong>
-	  		 > </strong> </button>
+<body onload="typeWriter()" style="background-color: #323232;">
+		<div id='landing'>
+	  		<div id="text"> </div>
 		</div>
-
 
 	
 </body>
 	<script type="text/javascript">
-		document.getElementById("nextHome").addEventListener("click", function(){
+
+			document.getElementById('text').addEventListener("click", function(){
 				window.location.href = './about.html';
-		})
+			});
+
+		
+			var i = 0;
+			var txt = '> welcome';
+			var speed = 100;
+
+
+			
+				function typeWriter() {
+				  if (i < txt.length) {
+				    document.getElementById("text").innerHTML += txt.charAt(i);
+				    i++;
+				    setTimeout(typeWriter, speed);
+				  }
+				  if(i == txt.length){
+				  	display()
+				  }
+				}
+
+			
+
+			function display(){
+				document.getElementById("text").style.borderStyle = "solid";
+				document.getElementById("text").style.borderColor = "white";
+				document.getElementById("text").style.borderWidth = "2px";
+				document.getElementById("text").style.padding = "10px";
+			}
+
+		
 	</script>
 </html>
