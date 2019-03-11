@@ -5,32 +5,189 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
 	<style>
+	.scroll {
+		position: absolute;
+  		bottom: 10px;
+  		text-align: center;
+  		color: whitesmoke;
+  		right: 48vw;
+  		visibility: hidden;
+	}
 
+	.parallax {
+	  min-height: 100vh; 
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+
+	.sticky {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	#copyphoto:hover .textbox {
+	  display: block;
+	}
+
+	#copyphoto:hover img {
+	  opacity: 0.3;
+	  display: block;
+	}
+
+	.portfolio {
+		text-align: center;
+	}
+
+	.portfolio img {
+		padding-top: 20px;
+	}
+
+
+	.container {
+	  position: relative;
+	  width: 80%;
+	}
+
+	.image {
+	  opacity: 1;
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	  transition: .5s ease;
+	  backface-visibility: hidden;
+	}
+
+	.middle {
+	  transition: .5s ease;
+	  opacity: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 40%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  text-align: center;
+	}
+
+	.container:hover .image {
+	  opacity: 0.3;
+	}
+
+	.container:hover .middle {
+	  opacity: 1;
+	}
+
+	.text {
+	  color: white;
+	  font-size: 16px;
+	  background-color: black;
+	  padding: 16px 32px;
+	}
 
 	</style>
 </head>
 <body onload="typeWriter()" style="background-color: #323232;">
-		<div id='landing'>
-	  		<div id="text"> </div>
+
+		<div class="parallax">
+			<div id='landing'>
+		  		<div id="text"> </div>
+			</div>
+
+			<div id="scroll" class="scroll"> S C R O L L <br>
+				<i id="arrow" class="fa fa-angle-double-down" style="font-size:24px"></i>
+			</div>
 		</div>
 
-	
+
+		<div style="width: 100%;background-color:whitesmoke;font-size:36px">
+		
+			<div id="page">
+				<h1 class="title"> Emery Chew </h1> 
+				<nav id="navbar"> 
+					<ul>
+					  <li><a href="#about">About</a></li>
+					  <li><a href="#experience">Experience</a></li>
+					  <li><a href="#skills">Skills</a></li>
+					  <li><a href="#portfolio"> Projects </a> </li>
+					  <li> <a href="RESUME2-26.pdf" download="EmeryChewResume"> Resume </a> </li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div id="about" > 
+				<h4> about </h4>
+				<p class="textbox"> 
+					I am a student at the University of Pittsburgh in my last semester of obtaining a Bachelor of Science in Computer Science. My most proficient languages are Java and Python. I have worked on large projects in both languages. I currently work at my university's IT help desk and I have interned as a software engineer at Bentley Systems where I worked on a code playground to be hosted on the company's website. I have experience with web development. I have done freelance work with creating an HTTP server in Python by using HTML and Javascript.
+				</p>
+			</div>
+
+			<div id="experience" > 
+				<h4> experience </h4>
+				<p class="textbox"> 
+					<a href="https://imodeljs.github.io/iModelJs-docs-output/learning/codeplaygrounds/?term=play"> <strong class="name"> Bentley Systems </strong> </a> <br> I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
+				</p>
+
+				<p class="textbox"> 
+					<strong class="name"> Dietrich School of Arts and Sciences </strong> <br>
+					Assist faculty and staff of the University of Pittsburgh with desktop I.T. problems. I have lead several projects that introduced new software to our users, while organizing other students.
+				</p>
+			</div>
+
+			<div id="skills" > 
+				<h4> skills </h4>
+					<table class="textbox">
+						<tr id="java"> <td> Java</td> </tr>
+						<tr id="python"> <td> Python </td> </tr>
+						<tr id="html"> <td> HTML</td> </tr>
+						<tr id="c"> <td> C </td> </tr>
+						<tr id="javascript"> <td> Javascript </td> </tr>
+					</table>
+					 
+			</div>
+
+		</div>
+
+		<div style="width: 100%;background-color:#DDDBDB;font-size:36px">
+
+			
+			<div class="portfolio" id="projects">
+
+				<div class="container">
+				  <img src="3DCopySystems.PNG" alt="Avatar" class="image" style="width:100%">
+				  <div class="middle">
+				    <div class="text textbox"> <strong class="CopySystems"> 3d Copy systems </strong> <br>Developed a python app, using Flask and a RESTful API, to run on a web server that assists in uploading pictures. Used JavaScript to create the front end and now their users can interact with the system on company tablets. </div>
+				  </div>
+				</div>
+
+				<div class="container">
+				  <img src="Lawrenceville.PNG"  alt="Lawrenceville" class="image" style="width:100%">
+				  <div class="middle">
+				    <div class="text textbox"> <a href='eac85.github.io/lawrenceville' ><strong class="name"> Website for local neighborhood </strong> </a>  </div>
+				  </div>
+				</div>
+
+			</div>
+
+		</div>
+
+
 </body>
 	<script type="text/javascript">
-
-			document.getElementById('text').addEventListener("click", function(){
-				window.location.href = './about.html';
-			});
-
 		
 			var i = 0;
 			var txt = '> welcome';
-			var speed = 100;
+			var speed = 200;
 
-
-			
 				function typeWriter() {
 				  if (i < txt.length) {
 				    document.getElementById("text").innerHTML += txt.charAt(i);
@@ -42,14 +199,119 @@
 				  }
 				}
 
-			
 
 			function display(){
 				document.getElementById("text").style.borderStyle = "solid";
 				document.getElementById("text").style.borderColor = "white";
 				document.getElementById("text").style.borderWidth = "2px";
 				document.getElementById("text").style.padding = "10px";
+				document.getElementById("scroll").style.visibility = "visible";
 			}
+
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+			    navbar.classList.add("sticky")
+			  } else {
+			    navbar.classList.remove("sticky");
+			  }
+			  if(isElementVisible(document.getElementById('skills')) && !SKILLSLOADED){
+			  		console.log(SKILLSLOADED)
+			  		skillsAppear();
+			  }
+			}
+
+			SKILLSLOADED = false;
+
+
+			function isElementVisible(el) {
+		    var rect     = el.getBoundingClientRect(),
+		        vWidth   = window.innerWidth || doc.documentElement.clientWidth,
+		        vHeight  = window.innerHeight || doc.documentElement.clientHeight,
+		        efp      = function (x, y) { return document.elementFromPoint(x, y) };     
+
+		    // Return false if it's not in the viewport
+		    if (rect.right < 0 || rect.bottom < 0 
+		            || rect.left > vWidth || rect.top > vHeight)
+		        return false;
+
+		    // Return true if any of its four corners are visible
+		    return (
+		          el.contains(efp(rect.left,  rect.top))
+		      ||  el.contains(efp(rect.right, rect.top))
+		      ||  el.contains(efp(rect.right, rect.bottom))
+		      ||  el.contains(efp(rect.left,  rect.bottom))
+		    );
+		}
+
+		function skillsAppear(){
+			filled =  '<i id="arrow" class="fas fa-circle" style="font-size:24px"></i>'
+			unfilled =  '<i id="arrow" class="far fa-circle" style="font-size:24px"></i>'
+			SKILLSLOADED = true;
+			var java = document.getElementById("java");
+			var python = document.getElementById("python");
+			var html = document.getElementById("html");
+			var c = document.getElementById("c");
+			var javascript = document.getElementById("javascript");
+
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 1);
+				addDot(javascript, 1);
+			}, 1000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 1);
+				addDot(javascript, 1);
+				
+			}, 2000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 1);
+				addDot(javascript, 1);
+				
+			}, 3000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 0);
+				addDot(javascript, 1);
+				
+			}, 4000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 0);
+				addDot(html, 1);
+				addDot(c, 0);
+				addDot(javascript, 1);
+				
+			}, 5000)
+		}
+
+		function addDot(el, filled){
+			if(filled == 1){
+				icon = '<i id="arrow" class="fas fa-circle" style="font-size:24px"></i>'
+			}
+			else {
+				icon = '<i id="arrow" class="far fa-circle" style="font-size:24px"></i>'
+			}
+
+			var cell = el.insertCell(el.cells.length);
+			cell.innerHTML =  icon
+		}
+
+
 
 		
 	</script>

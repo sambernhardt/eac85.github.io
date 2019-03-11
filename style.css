@@ -1,21 +1,16 @@
-body {
+		body {
 			margin: 0px;
 			padding: 0px;
 			background-color: whitesmoke;
 		}
 
-		.container img {
-			float: left;
-		}
+	
 
-		.container {
-		  height: 100vh;
-		  width: 100%;
-		  position: relative;
-		  color: whitesmoke;
-		  font-family: Magenta;
-		  font-size: 15vw;
-		  background-color: #323232;
+		.centered {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
 		}
 
 		#landing {
@@ -49,7 +44,6 @@ body {
 		}
 
 		.item {
-	        padding-left: 50%;
 	        padding: 0px 0px 0px 16px !important;
 	        border: none;
 	        vertical-align: middle;
@@ -100,9 +94,18 @@ body {
 			margin-top: 20px;
 		}
 
+		h4 {
+			font-family: Magenta;
+			color: black;
+			padding: 0;
+			margin-left: 150px;
+		}
+
 		nav {
 			text-align: center;
 			text-decoration: none;
+			font-size: 20px;
+			background-color: whitesmoke;
 		}
 
 		nav a {
@@ -131,9 +134,8 @@ body {
 			text-align: left;
 			margin-left: 150px;
 			margin-right: 150px;
-			margin-bottom: 10px;
-			margin-top: 50px;
-
+			font-family: Inconsolata;
+			font-size: 20px;
 		}
 
 		.name {
@@ -262,3 +264,35 @@ body {
 		  background: #ff6600;
 		  color: white;
 		}
+
+
+		/* tell the container's children to float left: */
+		.float-my-children > * {
+		    float:left;
+		    margin-right:5px;
+		}
+
+		/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+		.clearfix {
+		    *zoom:1 /* for IE */
+		}
+
+		.clearfix:before,
+		.clearfix:after {
+		    content: " ";
+		    display: table;
+		}
+
+		.clearfix:after {
+		    clear: both;
+		}
+
+		.portfolio {
+			margin-left: 100px;
+		}
+
+		.portfolio .textbox {
+			padding-bottom: 50px;
+		}
+
