@@ -32,7 +32,11 @@
 	}
 
 	td {
-		padding: 10px;
+		padding: 5px;
+	}
+
+	table {
+		padding-bottom: 10px;
 	}
 
 	#copyphoto:hover .textbox {
@@ -40,20 +44,23 @@
 	}
 
 	#copyphoto:hover img {
-	  opacity: 0.3;
+	  opacity: 0.5;
 	  display: block;
 	}
 
 	.portfolio {
 		text-align: center;
+
 	}
 
 	.portfolio img {
 		padding-top: 20px;
+		text-align: center; 
 	}
 
 
 	.container {
+	  text-align: center;
 	  position: relative;
 	  width: 80%;
 	}
@@ -61,10 +68,12 @@
 	.image {
 	  opacity: 1;
 	  display: block;
-	  width: 100%;
+	  width: 75%;
 	  height: auto;
 	  transition: .5s ease;
 	  backface-visibility: hidden;
+	  text-align: center;
+	  padding-left: 20%;
 	}
 
 	.middle {
@@ -72,7 +81,7 @@
 	  opacity: 0;
 	  position: absolute;
 	  top: 50%;
-	  left: 40%;
+	  left: 60%;
 	  transform: translate(-50%, -50%);
 	  -ms-transform: translate(-50%, -50%);
 	  text-align: center;
@@ -91,6 +100,7 @@
 	  font-size: 16px;
 	  background-color: black;
 	  padding: 16px 32px;
+	  font-family: Inconsolata;
 	}
 
 	</style>
@@ -118,6 +128,7 @@
 					  <li><a href="#experience">Experience</a></li>
 					  <li><a href="#skills">Skills</a></li>
 					  <li><a href="#portfolio"> Projects </a> </li>
+					  <li><a href="#contact"> contact </a> </li>
 					  <li> <a href="RESUME2-26.pdf" download="EmeryChewResume"> Resume </a> </li>
 					</ul>
 				</nav>
@@ -157,28 +168,37 @@
 
 		</div>
 
-		<div style="width: 100%;background-color:#DDDBDB;font-size:36px">
+		<div style="width: 100%;background-color: #323232;font-size:36px">
 
 			
 			<div class="portfolio" id="projects">
 
 				<div class="container">
-				  <img src="3DCopySystems.PNG" alt="Avatar" class="image" style="width:100%">
+				  <img src="3DCopySystems.PNG" alt="copysystemspage" class="image">
 				  <div class="middle">
-				    <div class="text textbox"> <strong class="CopySystems"> 3d Copy systems </strong> <br>Developed a python app, using Flask and a RESTful API, to run on a web server that assists in uploading pictures. Used JavaScript to create the front end and now their users can interact with the system on company tablets. </div>
+				    <div class="text "> <strong class="name"> 3D Copy systems </strong> <br>Developed a python app, using Flask and a RESTful API, to run on a web server that assists in uploading pictures. Used JavaScript to create the front end and now their users can interact with the system on company tablets. </div>
 				  </div>
 				</div>
 
 				<div class="container">
-				  <img src="Lawrenceville.PNG"  alt="Lawrenceville" class="image" style="width:100%">
+				  <img src="Bentley.PNG" alt="bentley" class="image">
 				  <div class="middle">
-				    <div class="text textbox"> <a href='eac85.github.io/lawrenceville' ><strong class="name"> Website for local neighborhood </strong> </a>  </div>
+				    <div class="text "> <strong class="name"> Bentley Systems </strong> <br> A code playground for users to use the libraries. </div>
+				  </div>
+				</div>
+
+				<div class="container">
+				  <img src="Lawrenceville.PNG"  alt="Lawrenceville" class="image">
+				  <div class="middle">
+				    <div class="text "> <a href='eac85.github.io/lawrenceville' ><strong class="name"> Website for local neighborhood </strong> </a>  </div>
 				  </div>
 				</div>
 
 			</div>
 
 		</div>
+
+		<div id="contact" style="width: 100%;background-color: #323232;font-size:36px">
 
 
 </body>
@@ -249,8 +269,8 @@
 		}
 
 		function skillsAppear(){
-			filled =  '<i id="arrow" class="fas fa-circle" style="font-size:24px"></i>'
-			unfilled =  '<i id="arrow" class="far fa-circle" style="font-size:24px"></i>'
+			filled =  '<i id="arrow" class="fas fa-circle" style="font-size:12px"></i>'
+			unfilled =  '<i id="arrow" class="far fa-circle" style="font-size:12px"></i>'
 			SKILLSLOADED = true;
 			var java = document.getElementById("java");
 			var python = document.getElementById("python");
@@ -264,7 +284,23 @@
 				addDot(html, 1);
 				addDot(c, 1);
 				addDot(javascript, 1);
+			}, 500)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 1);
+				addDot(javascript, 1);
+				
 			}, 1000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 1);
+				addDot(html, 1);
+				addDot(c, 1);
+				addDot(javascript, 1);
+				
+			}, 1500)
 			setTimeout(function(){
 				addDot(java, 1);
 				addDot(python, 1);
@@ -277,7 +313,7 @@
 				addDot(java, 1);
 				addDot(python, 1);
 				addDot(html, 1);
-				addDot(c, 1);
+				addDot(c, 0);
 				addDot(javascript, 1);
 				
 			}, 3000)
@@ -288,23 +324,31 @@
 				addDot(c, 0);
 				addDot(javascript, 1);
 				
-			}, 4000)
+			}, 3500)
 			setTimeout(function(){
 				addDot(java, 1);
 				addDot(python, 0);
 				addDot(html, 1);
 				addDot(c, 0);
-				addDot(javascript, 1);
+				addDot(javascript, 0);
 				
-			}, 5000)
+			}, 4000)
+			setTimeout(function(){
+				addDot(java, 1);
+				addDot(python, 0);
+				addDot(html, 0);
+				addDot(c, 0);
+				addDot(javascript, 0);
+				
+			}, 4500)
 		}
 
 		function addDot(el, filled){
 			if(filled == 1){
-				icon = '<i id="arrow" class="fas fa-circle" style="font-size:24px"></i>'
+				icon = '<i id="arrow" class="fas fa-circle" style="font-size:12px"></i>'
 			}
 			else {
-				icon = '<i id="arrow" class="far fa-circle" style="font-size:24px"></i>'
+				icon = '<i id="arrow" class="far fa-circle" style="font-size:12px"></i>'
 			}
 
 			var cell = el.insertCell(el.cells.length);
