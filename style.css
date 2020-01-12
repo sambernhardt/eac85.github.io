@@ -1,7 +1,7 @@
 		body {
 			margin: 0px;
 			padding: 0px;
-			background-color: whitesmoke;
+			background-color: white;
 		}
 
 	
@@ -76,6 +76,11 @@
 		}
 
 		@font-face{
+			font-family: Noodle;
+			src: url("fonts/noodle.ttf");
+		}
+
+		@font-face{
 			font-family: Inconsolata;
 			src: url("Inconsolata.otf");
 		}
@@ -86,14 +91,11 @@
 		}
 
 
-		.title {
-			font-family: Magenta;
-			font-size: 100px;
-			color:  #fee3a4;;
-			text-align: center;
-			margin-top: 20px;
-		}
 
+		#about img {
+			width: 50%;s
+
+		}
 		h4 {
 			font-family: Magenta;
 			color: black;
@@ -105,7 +107,6 @@
 			text-align: center;
 			text-decoration: none;
 			font-size: 20px;
-			background-color: whitesmoke;
 		}
 
 		nav a {
@@ -116,7 +117,7 @@
 
 		nav a:hover {
 			text-decoration: none;
-			color: #fee3a4;
+			color: #8E2612;;
 			font-family: boldfont;
 		}
 
