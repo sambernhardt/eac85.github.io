@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css?family=Rozha+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 	.scroll {
@@ -33,9 +36,12 @@
 	}
 
 	.sticky {
-	  position: fixed;
-	  top: 0;
-	  width: 100%;
+	    position: -webkit-sticky;
+  		position: sticky;
+  		top: 0;
+  		font-size: 15px;
+  		float:right;
+  		right: 0px;
 	}
 
 	td {
@@ -111,10 +117,9 @@
 	}
 
 	#text {
-		top: 100px;
 		float: right;
-		font-family: Noodle;
-		font-size: 150px;
+		font-family: 'Bebas Neue', cursive;
+		font-size: 125px;
 		color:  #8E2612;
 	}
 
@@ -123,23 +128,33 @@
 		background-repeat: no-repeat;
 	}
 
+	.contacting {
+		padding: 0px;
+	}
+
+
 
 	</style>
 </head>
 <body onload="fadeIn()" style="background-color: white;">
-		
+
+		<div class="sticky">
+			<div id="text" class="sticky"> Emery <br> Chew </div>  
+			<div class="contacting">
+				<a href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> <i class="fa fa-linkedin-square" style="font-size:24px;"></i> </a>
+				<a href="https://www.https://github.com/eac85"> <i class="fa fa-git-square" style="font-size:24px"></i></a>
+				<a href="https://www.https://github.com/eac85"> <i class="fa fa-envelope" style="font-size:24px"></i></i></a>
+			</div>
+
+
+		</div>
+
 		<div class="parallax">
 			<img src="images/Untitled_Artwork.png" alt="profile_picture" style=" top:0px;height:100vh">
-		  	<h1 id="text"> Emery <br> Chew </h1>  
-			
-
-			<div id="scroll" class="scroll"> S C R O L L <br>
-				<i id="arrow" class="fa fa-angle-double-down" style="font-size:24px"></i>
-			</div>
 		</div>
 
 
-		<div style="width: 100%;background-color:whitesmoke;font-size:36px; padding-bottom: 100px; padding-top: 50px;">
+		<div style="width: 75%;background-color:whitesmoke;font-size:36px; padding-bottom: 100px; padding-top: 50px;padding-right: 50%;">
 		
 
 			<div id="about" class="splotch"  > 
@@ -154,26 +169,19 @@
 			<div id="experience" > 
 				<h4> experience </h4>
 				<p class="textbox"> 
-					 Bentley Systems <br> I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
+					 <a href="https://www.mckesson.com/Pharmacy-Management/Software/EnterpriseRx-Pharmacy-Management-System/"><strong>McKesson <br> </strong> </a> As a software developer for Mckesson, I work on their EnterpriseRx system. EnterpriseRx is a hosted pharmacy management system that handles a pharmacy's day to day operations. I work in Java and SQL on a daily basis. I have developed helpful skills from working in an agile development. As a part of the defect team, I have learned how to debug and implement from more practical code. 
 				</p>
 
 				<p class="textbox"> 
-					<strong class="name"> Dietrich School of Arts and Sciences </strong> <br>
-					Assist faculty and staff of the University of Pittsburgh with desktop I.T. problems. I have lead several projects that introduced new software to our users, while organizing other students.
+					 <a href="https://www.bentley.com/en"><strong>Bentley Systems <br> </strong> </a> I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
+				</p>
+
+				<p class="textbox"> 
+					<a href="https://www.as.pitt.edu/information-technologydata-team"><strong> Dietrich School of Arts and Sciences <br> </strong> </a>
+					As a student assistant on the Information Technology team, I assisted faculty and staff of the University of Pittsburgh with desktop I.T. problems. I lead several projects that introduced new software to our users, while organizing other students.
 				</p>
 			</div>
 
-			<div id="skills" > 
-				<h4> skills </h4>
-					<table class="textbox">
-						<tr id="java"> <td> Java</td> </tr>
-						<tr id="python"> <td> Python </td> </tr>
-						<tr id="html"> <td> HTML</td> </tr>
-						<tr id="c"> <td> C </td> </tr>
-						<tr id="javascript"> <td> Javascript </td> </tr>
-					</table>
-					 
-			</div>
 
 		</div>
 
@@ -214,54 +222,11 @@
 
 		</div>
 
-		<div id="contact" style="width: 100%;background-color: black; color: #F7F2F2; font-size:36px; padding-bottom: 100px; padding-top: 20px"> 
-
-				<nav id="navbar"> 
-					<ul>
-					  <li><a href="#about">About</a></li>
-					  <li><a href="#experience">Experience</a></li>
-					  <li><a href="#skills">Skills</a></li>
-					  <li><a href="#portfolio"> Projects </a> </li>
-					  <li><a href="#contact"> contact </a> </li>
-					  <li> <a href="RESUME2-26.pdf" download="EmeryChewResume"> Resume </a> </li>
-					</ul>
-				</nav>
-			
-				<div class="textbox"  style="color: gray;"> EMAIL <br> <br> </div>
-				<div class="textbox" >eac85@pitt.edu </div>
-				<br> 
-				<div class="textbox"  style="color: gray">PHONE <br> <br> </div>
-				<div class="textbox" >610-973-4667 <br> </div>
-
-				<a class="textbox" href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> <i class="fab fa-linkedin-in"></i> </a>
-		
-
-		</div>
 
 
 </body>
 	<script type="text/javascript">
-		
-			var i = 0;
-			var txt = 'welcome';
-			var speed = 200;
 
-				function typeWriter() {
-				  if (i < txt.length) {
-				    document.getElementById("text").innerHTML += txt.charAt(i);
-				    i++;
-				    setTimeout(typeWriter, speed);
-				  }
-				  if(i == txt.length){
-				  	display()
-				  }
-				}
-
-
-			function display(){
-				document.getElementById("text").style.padding = "10px";
-				document.getElementById("scroll").style.visibility = "visible";
-			}
 
 			window.onscroll = function() {myFunction()};
 
@@ -303,92 +268,6 @@
 		    );
 		}
 
-		function skillsAppear(){
-			filled =  '<i id="arrow" class="fas fa-circle" style="font-size:12px"></i>'
-			unfilled =  '<i id="arrow" class="far fa-circle" style="font-size:12px"></i>'
-			SKILLSLOADED = true;
-			var java = document.getElementById("java");
-			var python = document.getElementById("python");
-			var html = document.getElementById("html");
-			var c = document.getElementById("c");
-			var javascript = document.getElementById("javascript");
-
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 1);
-				addDot(javascript, 1);
-			}, 500)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 1);
-				addDot(javascript, 1);
-				
-			}, 1000)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 1);
-				addDot(javascript, 1);
-				
-			}, 1500)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 1);
-				addDot(javascript, 1);
-				
-			}, 2000)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 0);
-				addDot(javascript, 1);
-				
-			}, 3000)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 1);
-				addDot(html, 1);
-				addDot(c, 0);
-				addDot(javascript, 1);
-				
-			}, 3500)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 0);
-				addDot(html, 1);
-				addDot(c, 0);
-				addDot(javascript, 0);
-				
-			}, 4000)
-			setTimeout(function(){
-				addDot(java, 1);
-				addDot(python, 0);
-				addDot(html, 0);
-				addDot(c, 0);
-				addDot(javascript, 0);
-				
-			}, 4500)
-		}
-
-		function addDot(el, filled){
-			if(filled == 1){
-				icon = '<i id="arrow" class="fas fa-circle" style="font-size:12px"></i>'
-			}
-			else {
-				icon = '<i id="arrow" class="far fa-circle" style="font-size:12px"></i>'
-			}
-
-			var cell = el.insertCell(el.cells.length);
-			cell.innerHTML =  icon
-		}
 
 
 
