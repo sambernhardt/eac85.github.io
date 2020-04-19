@@ -62,18 +62,16 @@
 	}
 
 	.portfolio {
-		text-align: center;
 
 	}
 
 	.portfolio img {
 		padding-top: 20px;
-		text-align: center; 
 	}
 
 
 	.container {
-	  text-align: center;
+	  text-align: left;
 	  position: relative;
 	  width: 80%;
 	}
@@ -85,7 +83,7 @@
 	  height: auto;
 	  transition: .5s ease;
 	  backface-visibility: hidden;
-	  text-align: center;
+	  text-align: left;
 	  padding-left: 20%;
 	}
 
@@ -97,7 +95,7 @@
 	  left: 60%;
 	  transform: translate(-50%, -50%);
 	  -ms-transform: translate(-50%, -50%);
-	  text-align: center;
+	  text-align: left;
 	}
 
 	.container:hover .image {
@@ -132,6 +130,14 @@
 		padding: 0px;
 	}
 
+	.contacting i {
+		color: gray;
+	}
+
+	.contacting i:visited {
+		color: gray;
+	}
+
 
 
 	</style>
@@ -139,10 +145,10 @@
 <body onload="fadeIn()" style="background-color: white;">
 
 		<div class="sticky">
-			<div id="text" class="sticky"> Emery <br> Chew </div>  
-			<div class="contacting">
-				<a href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> <i class="fa fa-linkedin-square" style="font-size:24px;"></i> </a>
-				<a href="https://www.https://github.com/eac85"> <i class="fa fa-git-square" style="font-size:24px"></i></a>
+			<div id="text" class="sticky" style="padding-right: 15%;"> Emery <br> Chew </div>  
+			<div class="contacting" style="padding-right: 15%;">
+				<a href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> <i class="fa fa-linkedin-square" style="font-size:24px;"></i></a>
+				<a href="https://github.com/eac85"> <i class="fa fa-git-square" style="font-size:24px"></i></a>
 				<a href="https://www.https://github.com/eac85"> <i class="fa fa-envelope" style="font-size:24px"></i></i></a>
 			</div>
 
@@ -239,36 +245,8 @@
 			  } else {
 			    navbar.classList.remove("sticky");
 			  }
-			  if(isElementVisible(document.getElementById('skills')) && !SKILLSLOADED){
-			  		console.log(SKILLSLOADED)
-			  		skillsAppear();
-			  }
+			  
 			}
-
-			SKILLSLOADED = false;
-
-
-			function isElementVisible(el) {
-		    var rect     = el.getBoundingClientRect(),
-		        vWidth   = window.innerWidth || doc.documentElement.clientWidth,
-		        vHeight  = window.innerHeight || doc.documentElement.clientHeight,
-		        efp      = function (x, y) { return document.elementFromPoint(x, y) };     
-
-		    // Return false if it's not in the viewport
-		    if (rect.right < 0 || rect.bottom < 0 
-		            || rect.left > vWidth || rect.top > vHeight)
-		        return false;
-
-		    // Return true if any of its four corners are visible
-		    return (
-		          el.contains(efp(rect.left,  rect.top))
-		      ||  el.contains(efp(rect.right, rect.top))
-		      ||  el.contains(efp(rect.right, rect.bottom))
-		      ||  el.contains(efp(rect.left,  rect.bottom))
-		    );
-		}
-
-
 
 
 		
