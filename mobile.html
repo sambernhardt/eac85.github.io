@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script type="text/javascript"src="jquery-3.5.1.min.js"></script>
+  	<script type="text/javascript" src="jquery.js"></script>
+
+  	<style>
+
+  			.scroll {
+				position: absolute;
+				bottom: 10px;
+				text-align: center;
+				color: whitesmoke;
+				right: 48vw;
+				visibility: hidden;
+			}
+
+			.parallax {
+				width: 100%;
+				background-image: url("images/splat.png");
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			a:visited {
+				text-decoration: none;
+				color: inherit;
+
+			}
+
+
+			#copyphoto:hover .textbox {
+				display: block;
+			}
+
+			#copyphoto:hover img {
+				opacity: 0.5;
+				display: block;
+			}
+
+
+			.portfolio img {
+				padding-top: 20px;
+			}
+
+
+			.container {
+				text-align: left;
+				position: relative;
+				width: 80%;
+			}
+
+			.image {
+				opacity: 1;
+				display: block;
+				width: 75%;
+				height: auto;
+				transition: .5s ease;
+				backface-visibility: hidden;
+				text-align: left;
+				padding-left: 20%;
+			}
+
+			.middle {
+				transition: .5s ease;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				left: 60%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				text-align: left;
+			}
+
+			.container:hover .image {
+				opacity: 0.3;
+			}
+
+			.container:hover .middle {
+				opacity: 1;
+			}
+
+			.text {
+				color: white;
+				font-size: 16px;
+				background-color: black;
+				padding: 16px 32px;
+				font-family: Inconsolata;
+			}
+
+			#text {
+				float: right;
+				font-family: 'Bebas Neue', cursive;
+				font-size: 125px;
+				color:  #8E2612;
+			}
+
+			.splotch {
+				background-image: url("images/splotch.png");
+				background-repeat: no-repeat;
+			}
+
+			.contacting {
+				padding: 0px;
+			}
+
+			.contacting i {
+				color: gray;
+			}
+
+			.contacting i:visited {
+				color: gray;
+			}
+
+  	</style>
+
+<body>
+
+<header class="w3-container">
+
+</header>
+
+<div class = "ticker-container" style="width: 100%">
+				<div class = "ticker-text-mobile" >
+			    <h3>BLACK LIVES MATTER: George Floyd Yolanda Thomas Xavier Tyrell Johnson Darrell Banks Cedrick Chatman Quintine Barksdale Jayvis Benjamin Donovan Thomas Anthony Dwayne Harris Charles A Baker Jr Clinton Roebexar Allen Willie Lee Bingham Jr Russell Lydell Smith Dylan Samuel-Peters Dason Peters Craig Demps Fred Bradford Jr. Clifton Armstrong Deion Fludd Kendra Diggs Marlon Brown Jermaine Darden Terry Lafette Julian Dawkins Bill Jackson Dustin Keith Glover Ezell Ford Dante Parker Corey Lavert Tanner Levon Leroy Love Arvel Douglas Williams Vemicia Woodward Cortez Washington Darrian Nathaniel Hunt Ricky Deangelo Hinkle Cameron Tilman Eugene Williams Oliver Jarred Gregoire Marlon S. Woodstock Lashano J. Gilbert Balantine Mbegbu Iretha Lilly VonDerrir D. Myers Jr. Adama Ardett Madison Michael Ricardo Minor Kaldrick Donald John T. Wilson III Raphael Thomas Tanisha N. Anderson Keara Crowder Akai Gurley Tamir E Rice Eric Ricks Rumain Brisbon Dennis Grisby David Andre Scott Jerome C. Reid Brian Pickett Leslie Sapp II Andre Larone Murphy Jr. Artago Damon Howard Tiano Meto Jeremy Lett Natasha McKenna Lavall Hall</h3>
+				</div>
+			</div>
+
+<div class="w3-cell-row">
+  <div class="w3-cell w3-container">
+   	<div class="parallax-mobile">
+			
+			<img src="images/Untitled_Artwork.png" alt="profile_picture" style=" top:0px;width:100%; padding-top:10%">
+		</div>
+  </div>
+</div>
+
+<div>
+			
+
+			<div id="about" class="splotch"  > 
+				<h4> about </h4>
+				<p class="textbox-mobile" > 
+
+					I am a software engineer based in Pittsburgh, Pa. I enjoy getting lost in the creation of new things and using tech to assist me. Whether I am designing a personal workout program in Java, coding a Twitter bot in python, or upating my website, I am constantly designing and learning. After graduating from the University of Pittsburgh in April 2019 with a Bachelor of Science in Computer Science, I began working for the development team at Mckesson Corp. 
+
+				</p>
+			</div>
+
+			<div id="experience" > 
+				<h4> experience </h4>
+				<p class="textbox-mobile"> 
+					<a href="https://www.mckesson.com/Pharmacy-Management/Software/EnterpriseRx-Pharmacy-Management-System/"><strong>McKesson <br> </strong> </a> As a software developer for Mckesson, I work on their EnterpriseRx system. EnterpriseRx is a hosted pharmacy management system that handles a pharmacy's day to day operations. I work in Java and SQL on a daily basis. I have developed helpful skills from working in an agile development. As a part of the defect team, I have learned how to debug and implement from more practical code. 
+				</p>
+
+				<p class="textbox-mobile"> 
+					<a href="https://www.bentley.com/en"><strong>Bentley Systems <br> </strong> </a> I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
+				</p>
+
+				<p class="textbox-mobile"> 
+					<a href="https://www.as.pitt.edu/information-technologydata-team"><strong> Dietrich School of Arts and Sciences <br> </strong> </a>
+					As a student assistant on the Information Technology team, I assisted faculty and staff of the University of Pittsburgh with desktop I.T. problems. I lead several projects that introduced new software to our users, while organizing other students.
+				</p>
+			</div>
+
+
+		</div>
+
+
+<footer class="w3-container">
+</footer>
+
+</body>
+
+<script type="text/javascript">
+
+		var width = $('.ticker-text-mobile').width(),
+	    containerwidth = $('.ticker-container').width(),
+	    left = containerwidth;
+		$(document).ready(function(e){
+			function tick() {
+		        if(--left < -width){
+		            left = containerwidth;
+		        }
+		        $(".ticker-text-mobile").css("margin-left", left + "px");
+		        setTimeout(tick, 20);
+		      }
+		      tick();
+		});
+
+	</script>
+</html>

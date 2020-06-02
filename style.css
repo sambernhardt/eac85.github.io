@@ -93,7 +93,7 @@
 
 
 		#about img {
-			width: 50%;s
+			width: 50%;
 
 		}
 		h4 {
@@ -137,6 +137,15 @@
 			margin-right: 150px;
 			font-family: Inconsolata;
 			font-size: 20px;
+			height: 6cm;
+		}
+
+		.textbox-mobile {
+			margin-left: 10%;
+			margin-right: 10%;
+			text-align: left;
+			font-family: Inconsolata;
+			font-size: 80%;
 			height: 6cm;
 		}
 
@@ -319,5 +328,19 @@
 		  	font-family: 'Montserrat', sans-serif;
 		  	text-transform: uppercase;
 		}
+
+
+		.ticker-text-mobile {
+			font-size: 1px;
+			height: 100%;
+		  	color: #fafafa;
+		  	white-space:nowrap;
+		  	display:inline-block;
+		  	font-family: 'Montserrat', sans-serif;
+		  	text-transform: uppercase;
+		}
+
+
+
 
 
