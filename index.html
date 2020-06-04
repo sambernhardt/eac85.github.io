@@ -22,13 +22,13 @@
 		font-weight: bold;
 	}
 	h1 {
-		font-size: 35px;
+		font-size: 25px;
 		font-weight: bold;
 		text-align: center;
 		font-family: boldfont;
 	}
 	h2 {
-		font-size: 20px;
+		font-size: 15px;
 		font-weight: bold;
 		margin-top: 0;
 	}
@@ -40,8 +40,9 @@
 		display: flex;
 		align-items: stretch;
 		width: 100%;
-		min-height: 40vh; 
+		min-height: 70vh; 
 		overflow: auto;
+		font-size: 12px;
 
 		scroll-snap-type: x mandatory; /* Chrome Canary */
 		scroll-snap-type: mandatory; /* Firefox */
@@ -81,6 +82,7 @@
 	#header {
 		text-align: center;
 		font-family: Inconsolata;
+		font-size: 12px;
 
 	}
 
@@ -120,7 +122,7 @@
     	-webkit-box-sizing: border-box;
        	-moz-box-sizing: border-box;
          box-sizing: border-box;
-         font-size: 15px;
+         font-size: 10px;
          font-family: Inconsolata;
 	}
 
@@ -142,11 +144,11 @@
 		</p>
 		<div class="snap-container">
 			<div>
-				Name:<input type="name" id="name" value="">
+				Name:<input type="name" id="name" value=""> <br>
 				Residence:<input type="residence" id="residence" value="Pittsburgh, Pa"> <br> <br>
 				Message: <br> 
 
-				<textarea id="message" name="message" rows="15">
+				<textarea id="message" name="message" rows="10">
   				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
   				</textarea>
 				<br> <br>
@@ -279,14 +281,13 @@
 
 	var name = '[name]';
 	var residence = '[residence]';
-	var msg = 'I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. ' 
-		+ 'I demand that we start providing more support towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future.';
+	var msg = "I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. The police have been disproportionately killing, profiling, and arresting black men for decades. Being complacent to the police's responsibility in this is dangerous and unreprehensible. I demand that we start providing more support towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future.";
 
 	function updateTheEmails(){
 		console.log('updating emails');
 		var x = document.getElementsByClassName("mailto");
 		var bodyElementList = document.getElementsByClassName("body");
-		var greeting = 'Hello, my name is ' + name + ' and I am a resident of ' + residence + '.'
+		var greeting = 'Hello,' +" %0D%0A" + 'My name is ' + name + ' and I am a resident of ' + residence + '.'
 		var msgInput = document.getElementById('message').value;
 		console.log(x.length);
 		bodyElementList[x.length].innerHTML = greeting + ' ' + msgInput;
@@ -295,7 +296,7 @@
 			hrefString = x[i].getAttribute("href"); // sec/IF00.html
 			console.log(hrefString);
 			hrefElement.setAttribute("href", hrefString + '&subject=BLM and Pittsburgh Protests&body=' + greeting + ' '
-				+ msgInput + 'Sincerely, ' + name);
+				+ msgInput +" %0D%0A" +  ' Sincerely, ' +" %0D%0A" + name);
 			bodyElementList[i].innerHTML = greeting + ' ' + msgInput;
 
 		}
@@ -322,7 +323,5 @@
 
 <script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/mailgo@0.8.5/dist/mailgo.min.js"></script>
 
 </html>
