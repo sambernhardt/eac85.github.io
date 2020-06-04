@@ -148,7 +148,7 @@
 				Residence:<input type="residence" id="residence" value="Pittsburgh, Pa"> <br> <br>
 				Message: <br> 
 
-				<textarea id="message" name="message" rows="10">
+				<textarea id="message" name="message" rows="15">
   				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
   				</textarea>
 				<br> <br>
@@ -156,10 +156,15 @@
 			</div>
 			<div>
 				<h2>
-					Pittsburgh Mayor: <br>Bill Peduto
+					Pittsburgh Mayor: Bill Peduto <br>
+					Pittsburgh Mayor, Executive Assistant: James Hill
 				</h2>
 				<p>
-					<a href="tel:4122552133" >412.255.2133</a>
+					<a href="tel:4122552133" >Peduto: 412.255.2133</a> <br>
+					<a href="tel:4122552696">Hill: 412.255.2696</a> <br>
+					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">james.hill@pittsburghpa.gov</a>
+					
+
 				</p>
 				  <br><br><p class="body"> </p>
 			</div>
@@ -184,18 +189,6 @@
 					<a href="tel:4122552608">412.255.2608</a> <br>
 					 <br> <br><p class="body"> </p>
 				</p>
-			</div>
-			<div>
-				<h2>
-					Pittsburgh Mayor, Executive Assistant:  <br>James Hill
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">james.hill@pittsburghpa.gov</a>
-					<br>
-					<a href="tel:4122552696">412.255.2696</a>
-					  <br><br><p class="body"> </p>
-				</p>
-
 			</div>
 			<div>
 				<h2>
@@ -281,7 +274,9 @@
 
 	var name = '[name]';
 	var residence = '[residence]';
-	var msg = "I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. It is dangerous and reprehensible to be complicit in letting the police terrorize our community. I support criminal justice reform, the call for civilian oversight of police, and allocation of taxpayer funds towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future. ";
+	var msg = "I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. I demand a change that the Pittsburgh police must exhaust other means before shooting, shooting moving vehicles is banned, and that comprehensive reporting is required. "
+		+" %0D%0A" + 
+	    "Additionally, I support criminal justice reform, the call for civilian oversight of police, and allocation of taxpayer funds towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future. ";
 
 	function updateTheEmails(){
 		console.log('updating emails');
@@ -290,7 +285,7 @@
 		var greeting = 'Hello,' +" %0D%0A" + 'My name is ' + name + ' and I am a resident of ' + residence + '.'
 		var msgInput = document.getElementById('message').value;
 		console.log(x.length);
-		bodyElementList[x.length].innerHTML = greeting + ' ' + msgInput;
+		bodyElementList[x.length-1].innerHTML = greeting + ' ' + msgInput;
 		for(var i=0; i <= x.length; i++){
 			hrefElement = x[i];
 			hrefString = x[i].getAttribute("href"); // sec/IF00.html
@@ -314,6 +309,7 @@
 		document.getElementById("message").value = msg;
 		let items = document.querySelectorAll('section');
 		//cssScrollSnapPolyfill()
+		updateTheEmails()
 	}
 	init(); 
 
