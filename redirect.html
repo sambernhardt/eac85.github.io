@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+</body>
+
+<script>
+
+	var name = '[name]';
+	var residence = '[residence]';
+	var msg = "I am emailing you today to let you know that I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions." +" %0D%0A  %0D%0A" + 
+		"I’m urging you to take the pledge to enact the #8CantWait Use of Force policies. The #8CantWait policies are simple, common-sense and would make our community safer. Pittsburgh is okay with 4 policies that are a part of the #8CantWait pledge. Can you commit to enacting the following policies?" +" %0D%0A"+
+				"1. Require Exhaust All Alternatives Before Shooting %0D%0A" +
+				"2. Duty To Intervene %0D%0A" +
+				"3. Ban shooting at moving vehicles %0D%0A" +
+				"4. Require Comprehensive Reporting" 
+		+" %0D%0A  %0D%0A" + 
+	    "Additionally, I support criminal justice reform, the call for civilian oversight of police, and allocation of taxpayer funds towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future. ";
+
+	window.onload = function() {
+		var greeting = 'Hello,' +" %0D%0A  %0D%0A" + 'My name is ' + name + ' and I am a resident of ' + residence + '.'
+    	window.location.href = "mailto:bill.peduto@pittsburghpa.gov?&cc=james.hill@pittsburghpa.gov" +  '&subject=Pittsburgh #8CantWait&body=' + greeting + ' ' + msg +" %0D%0A  %0D%0A" +  ' Sincerely, ' +" %0D%0A" + name
+	}
+
+</script>
+
+
+
+
+</html>
