@@ -1,323 +1,196 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script type="text/javascript"src="jquery-3.5.1.min.js"></script>
+  	<script type="text/javascript" src="jquery.js"></script>
 
-<style>
-	body {
-		margin-top: 5%;
-		background-color: white;
-	}
+  	<style>
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
+  			.scroll {
+				position: absolute;
+				bottom: 10px;
+				text-align: center;
+				color: whitesmoke;
+				right: 48vw;
+				visibility: hidden;
+			}
 
-	body {
-		margin-bottom: 45px;
-	}
-	code {
-		background: transparent;
-		font-weight: bold;
-	}
-	h1 {
-		font-size: 25px;
-		font-weight: bold;
-		text-align: center;
-		font-family: boldfont;
-	}
-	h2 {
-		font-size: 15px;
-		font-weight: bold;
-		margin-top: 0;
-	}
-	* {
-		box-sizing: border-box;
-	}
+			.parallax {
+				width: 100%;
+				background-image: url("images/splat.png");
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 
-	.snap-container {
-		display: flex;
-		align-items: stretch;
-		width: 100%;
-		min-height: 70vh; 
-		overflow: auto;
-		font-size: 12px;
+			a:visited {
+				text-decoration: none;
+				color: inherit;
 
-		scroll-snap-type: x mandatory; /* Chrome Canary */
-		scroll-snap-type: mandatory; /* Firefox */
-		-ms-scroll-snap-type: mandatory; /* IE/Edge */
-		-webkit-scroll-snap-type: mandatory; /* Safari */
-		-webkit-scroll-snap-destination: 0% 0%;
-		-webkit-overflow-scrolling: touch; /* important for iOS */
-	}
-
-	.snap-container > div {
-		font-family: Inconsolata;
-		width: 100%;
-		flex-shrink: 0;
-		padding: 12px;
-		margin: 5px;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  
-
-		scroll-snap-align: start; /* latest (Chrome 69+) */
-		scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */
-		-webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */
-	}
-
-	.snap-container > div:nth-child(even) {
-		background: #87EA87;
-	}
-
-	.snap-container > div:nth-child(odd) {
-		background: #87CCEA;
-	}
-
-	button {
-		border-width: 1px;
-		border-color: black;
-		text-align: center;
-	}
-
-	#header {
-		text-align: center;
-		font-family: Inconsolata;
-		font-size: 12px;
-
-	}
-
-	@font-face{
-		font-family: Magenta;
-		src: url("Magenta Demo.ttf");
-	}
-
-	@font-face{
-		font-family: Noodle;
-		src: url("fonts/noodle_oblique.ttf");
-	}
-
-	@font-face{
-		font-family: Inconsolata;
-		src: url("Inconsolata.otf");
-	}
-
-	@font-face{
-		font-family: boldfont;
-		src: url("theboldfont.ttf");
-	}
-
-	.body {
-		font-family: Inconsolata;
-
-	}
-
-	input .message {
-		width: 100px;
-		height: 200px;
-	}
-
-	textarea {
-    	display: block;
-    	width: 100%;
-    	-webkit-box-sizing: border-box;
-       	-moz-box-sizing: border-box;
-         box-sizing: border-box;
-         font-size: 10px;
-         font-family: Inconsolata;
-	}
+			}
 
 
+			#copyphoto:hover .textbox {
+				display: block;
+			}
 
-</style>
+			#copyphoto:hover img {
+				opacity: 0.5;
+				display: block;
+			}
+
+
+			.portfolio img {
+				padding-top: 20px;
+			}
+
+
+			.container {
+				text-align: left;
+				position: relative;
+				width: 80%;
+			}
+
+			.image {
+				opacity: 1;
+				display: block;
+				width: 75%;
+				height: auto;
+				transition: .5s ease;
+				backface-visibility: hidden;
+				text-align: left;
+				padding-left: 20%;
+			}
+
+			.middle {
+				transition: .5s ease;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				left: 60%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				text-align: left;
+			}
+
+			.container:hover .image {
+				opacity: 0.3;
+			}
+
+			.container:hover .middle {
+				opacity: 1;
+			}
+
+			.text {
+				color: white;
+				font-size: 16px;
+				background-color: black;
+				padding: 16px 32px;
+				font-family: Inconsolata;
+			}
+
+			#text {
+				float: right;
+				font-family: 'Bebas Neue', cursive;
+				font-size: 125px;
+				color:  #8E2612;
+			}
+
+			.splotch {
+				background-image: url("images/splotch.png");
+				background-repeat: no-repeat;
+			}
+
+			.contacting {
+				padding: 0px;
+			}
+
+			.contacting i {
+				color: gray;
+			}
+
+			.contacting i:visited {
+				color: gray;
+			}
+
+  	</style>
+
 <body>
 
-	<div>
+<header class="w3-container">
 
-		<h1>
-			Pittsburgh! Contact Your Representatives
-		</h1>
-		<p id='header' style="text-align:center;">
-			<br>
-			Put in your information and scroll to contact your representatives <br>
+</header>
+
+<div class = "ticker-container" style="width: 100%">
+				<div class = "ticker-text-mobile" >
+			    <h3>BLACK LIVES MATTER: George Floyd Yolanda Thomas Xavier Tyrell Johnson Darrell Banks Cedrick Chatman Quintine Barksdale Jayvis Benjamin Donovan Thomas Anthony Dwayne Harris Charles A Baker Jr Clinton Roebexar Allen Willie Lee Bingham Jr Russell Lydell Smith Dylan Samuel-Peters Dason Peters Craig Demps Fred Bradford Jr. Clifton Armstrong Deion Fludd Kendra Diggs Marlon Brown Jermaine Darden Terry Lafette Julian Dawkins Bill Jackson Dustin Keith Glover Ezell Ford Dante Parker Corey Lavert Tanner Levon Leroy Love Arvel Douglas Williams Vemicia Woodward Cortez Washington Darrian Nathaniel Hunt Ricky Deangelo Hinkle Cameron Tilman Eugene Williams Oliver Jarred Gregoire Marlon S. Woodstock Lashano J. Gilbert Balantine Mbegbu Iretha Lilly VonDerrir D. Myers Jr. Adama Ardett Madison Michael Ricardo Minor Kaldrick Donald John T. Wilson III Raphael Thomas Tanisha N. Anderson Keara Crowder Akai Gurley Tamir E Rice Eric Ricks Rumain Brisbon Dennis Grisby David Andre Scott Jerome C. Reid Brian Pickett Leslie Sapp II Andre Larone Murphy Jr. Artago Damon Howard Tiano Meto Jeremy Lett Natasha McKenna Lavall Hall</h3>
+				</div>
+			</div>
+
+<div class="w3-cell-row">
+  <div class="w3-cell w3-container">
+   	<div class="parallax-mobile">
+			
+			<img src="images/Untitled_Artwork.png" alt="profile_picture" style=" top:0px;width:100%; padding-top:10%">
+		</div>
+  </div>
+</div>
+
+<div>
 			
 
-		</p>
-		<div class="snap-container">
-			<div>
-				Name:<input type="name" id="name" value=""> <br>
-				Residence:<input type="residence" id="residence" value="Pittsburgh, Pa"> <br> <br>
-				Message: <br> 
+			<div id="about" class="splotch"  > 
+				<h4> about </h4>
+				<p class="textbox-mobile" > 
 
-				<textarea id="message" name="message" rows="15">
-  				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-  				</textarea>
-				<br> <br>
-				<button onclick="myFunction()">Update Information</button>
-			</div>
-			<div>
-				<h2>
-					Pittsburgh Mayor: Bill Peduto <br>
-					Pittsburgh Mayor, Executive Assistant: James Hill
-				</h2>
-				<p>
-					<a href="tel:4122552133" >Peduto: 412.255.2133</a> <br>
-					<a href="tel:4122552696">Hill: 412.255.2696</a> <br>
-					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">james.hill@pittsburghpa.gov</a>
-					
+					I am a software engineer based in Pittsburgh, Pa. I enjoy getting lost in the creation of new things and using tech to assist me. Whether I am designing a personal workout program in Java, coding a Twitter bot in python, or upating my website, I am constantly designing and learning. After graduating from the University of Pittsburgh in April 2019 with a Bachelor of Science in Computer Science, I began working for the development team at Mckesson Corp. 
 
 				</p>
-				  <br><br><p class="body"> </p>
 			</div>
-			<div>
-				<h2>
-					Pittsburgh Chief of Staff: <br> Dan Gilman	
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:daniel.gillman@pittsburghpa.gov?">daniel.gillman@pittsburghpa.gov	</a>
-					<br>
-					<a href="tel:4122552626" >412.255.2626</a>
-					  <br><br><p class="body"> </p>
-				</p>
-			</div>
-			<div>
-				<h2>
-					Pittsburgh Deputy COS/Chief Equity Officer:  <br>Majestic Lane
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:majestic.lane@pittsburghpa.gov?">majestic.lane@pittsburghpa.gov</a>
-					<br>
-					<a href="tel:4122552608">412.255.2608</a> <br>
-					 <br> <br><p class="body"> </p>
-				</p>
-			</div>
-			<div>
-				<h2>
-					Pittsburgh Public Safety Director:  <br>Wendell Hissrich  
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:wendell.hissrich@pittsburghpa.gov?">wendell.hissrich@pittsburghpa.gov</a>
-					<br>
-					<a href="tel:4122558615">412.255.8615</a>
-					  <br><br><p class="body"> </p>
+
+			<div id="experience" > 
+				<h4> experience </h4>
+				<p class="textbox-mobile"> 
+					<a href="https://www.mckesson.com/Pharmacy-Management/Software/EnterpriseRx-Pharmacy-Management-System/"><strong>McKesson <br> </strong> </a> As a software developer for Mckesson, I work on their EnterpriseRx system. EnterpriseRx is a hosted pharmacy management system that handles a pharmacy's day to day operations. I work in Java and SQL on a daily basis. I have developed helpful skills from working in an agile development. As a part of the defect team, I have learned how to debug and implement from more practical code. 
 				</p>
 
-			</div>
-			<div>
-				<h2>
-					Pittsburgh City Controller:	 <br>Michael Lamb
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:info@lambforpa.com?">info@lambforpa.com</a>
+				<p class="textbox-mobile"> 
+					<a href="https://www.bentley.com/en"><strong>Bentley Systems <br> </strong> </a> I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
 				</p>
-				 <br> <br><p class="body"> </p>
 
-			</div>
-			<div>
-				<h2>
-					Pittsburgh City Clerk:  <br>Brenda Pree   
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:brenda.pree@pittsburghpa.gov?">brenda.pree@pittsburghpa.gov</a>
-					<br>
-					<a href="tel:4122552138">412.255.2138</a>
+				<p class="textbox-mobile"> 
+					<a href="https://www.as.pitt.edu/information-technologydata-team"><strong> Dietrich School of Arts and Sciences <br> </strong> </a>
+					As a student assistant on the Information Technology team, I assisted faculty and staff of the University of Pittsburgh with desktop I.T. problems. I lead several projects that introduced new software to our users, while organizing other students.
 				</p>
-				 <br> <br><p class="body"> </p>
-
 			</div>
-			<div>
-				<h2>
-					Pittsburgh Assistant City Clerk:  <br>Kimberly Clark-Baskin
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">kim.clark-baskin@pittsburghpa.gov	</a>
-					<br>
-					<a href="tel:4122552132">412.255.2132</a>
-				</p>
-				  <br><br><p class="body"> </p>
 
-			</div>
-			<div>
-				<h2>
-					PA Allegheny County Rep, District 19:  <br>Hon. Jake Wheatley
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:repwheatley@pahouse.net?">repwheatley@pahouse.net</a>
-					<br>
-					<a href="tel:4124717760">412.471.7760</a>
-				</p>
-				  <br><br><p class="body"> </p>
 
-			</div>
-			<div>
-				<h2>
-					Pittsburgh Police Chief: <br>	Scott Schubert
-				</h2>
-				<p>
-					<a class="mailto" href="mailto:scott.schubert@pittsburghpa.gov?">scott.schubert@pittsburghpa.gov</a>
-					<br>
-					<a href="tel:4123237897">412.323.7897</a>
-				</p>
-				 <br> <br><p class="body"> </p>
-
-			</div>
 		</div>
 
-	</div>
-	
-	<a href="https://jsfiddle.net/Wijmo5/5f9d7cte/">CSS scroll snap</a></small>
-</div>
-<a href="https://mailgo.js.org?ref=codepen">mailgo.js.org</a></small>
-</div>
+
+<footer class="w3-container">
+</footer>
+
 </body>
 
-<script>
+<script type="text/javascript">
 
-	var name = '[name]';
-	var residence = '[residence]';
-	var msg = "I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. I demand a change that the Pittsburgh police must exhaust other means before shooting, shooting moving vehicles is banned, and that comprehensive reporting is required. "
-		+" %0D%0A" + 
-	    "Additionally, I support criminal justice reform, the call for civilian oversight of police, and allocation of taxpayer funds towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future. ";
+		var width = $('.ticker-text-mobile').width(),
+	    containerwidth = $('.ticker-container').width(),
+	    left = containerwidth;
+		$(document).ready(function(e){
+			function tick() {
+		        if(--left < -width){
+		            left = containerwidth;
+		        }
+		        $(".ticker-text-mobile").css("margin-left", left + "px");
+		        setTimeout(tick, 20);
+		      }
+		      tick();
+		});
 
-	function updateTheEmails(){
-		console.log('updating emails');
-		var x = document.getElementsByClassName("mailto");
-		var bodyElementList = document.getElementsByClassName("body");
-		var greeting = 'Hello,' +" %0D%0A" + 'My name is ' + name + ' and I am a resident of ' + residence + '.'
-		var msgInput = document.getElementById('message').value;
-		console.log(x.length);
-		bodyElementList[x.length-1].innerHTML = greeting + ' ' + msgInput;
-		for(var i=0; i <= x.length; i++){
-			hrefElement = x[i];
-			hrefString = x[i].getAttribute("href"); // sec/IF00.html
-			console.log(hrefString);
-			hrefElement.setAttribute("href", hrefString + '&subject=BLM and Pittsburgh Protests&body=' + greeting + ' '
-				+ msgInput +" %0D%0A" +  ' Sincerely, ' +" %0D%0A" + name);
-			bodyElementList[i].innerHTML = greeting + ' ' + msgInput;
-
-		}
-
-	}
-
-
-	function myFunction() {
-		name = document.getElementById("name").value;
-		residence = document.getElementById("residence").value;
-		updateTheEmails()
-	}
-
-	const init = function(){
-		document.getElementById("message").value = msg;
-		let items = document.querySelectorAll('section');
-		//cssScrollSnapPolyfill()
-		updateTheEmails()
-	}
-	init(); 
-
-</script>
-
-
-
-<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
-
-
+	</script>
 </html>
