@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	body {
+		margin-top: 5%;
+		background-color: white;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		margin-bottom: 45px;
+	}
+	code {
+		background: transparent;
+		font-weight: bold;
+	}
+	h1 {
+		font-size: 25px;
+		font-weight: bold;
+		text-align: center;
+		font-family: boldfont;
+	}
+	h2 {
+		font-size: 15px;
+		font-weight: bold;
+		margin-top: 0;
+	}
+	* {
+		box-sizing: border-box;
+	}
+
+	.snap-container {
+		display: flex;
+		align-items: stretch;
+		width: 100%;
+		min-height: 70vh; 
+		overflow: auto;
+		font-size: 12px;
+
+		scroll-snap-type: x mandatory; /* Chrome Canary */
+		scroll-snap-type: mandatory; /* Firefox */
+		-ms-scroll-snap-type: mandatory; /* IE/Edge */
+		-webkit-scroll-snap-type: mandatory; /* Safari */
+		-webkit-scroll-snap-destination: 0% 0%;
+		-webkit-overflow-scrolling: touch; /* important for iOS */
+	}
+
+	.snap-container > div {
+		font-family: Inconsolata;
+		width: 100%;
+		flex-shrink: 0;
+		padding: 12px;
+		margin: 5px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  
+
+		scroll-snap-align: start; /* latest (Chrome 69+) */
+		scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */
+		-webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */
+	}
+
+	.snap-container > div:nth-child(even) {
+		background: #87EA87;
+	}
+
+	.snap-container > div:nth-child(odd) {
+		background: #87CCEA;
+	}
+
+	button {
+		border-width: 1px;
+		border-color: black;
+		text-align: center;
+	}
+
+	#header {
+		text-align: center;
+		font-family: Inconsolata;
+		font-size: 12px;
+
+	}
+
+	@font-face{
+		font-family: Magenta;
+		src: url("Magenta Demo.ttf");
+	}
+
+	@font-face{
+		font-family: Noodle;
+		src: url("fonts/noodle_oblique.ttf");
+	}
+
+	@font-face{
+		font-family: Inconsolata;
+		src: url("Inconsolata.otf");
+	}
+
+	@font-face{
+		font-family: boldfont;
+		src: url("theboldfont.ttf");
+	}
+
+	.body {
+		font-family: Inconsolata;
+
+	}
+
+	input .message {
+		width: 100px;
+		height: 200px;
+	}
+
+	textarea {
+    	display: block;
+    	width: 100%;
+    	-webkit-box-sizing: border-box;
+       	-moz-box-sizing: border-box;
+         box-sizing: border-box;
+         font-size: 10px;
+         font-family: Inconsolata;
+	}
+
+
+
+</style>
+<body>
+
+	<div>
+
+		<h1>
+			Pittsburgh! Contact Your Representatives
+		</h1>
+		<p id='header' style="text-align:center;">
+			<br>
+			Put in your information and scroll to contact your representatives <br>
+			
+
+		</p>
+		<div class="snap-container">
+			<div>
+				Name:<input type="name" id="name" value=""> <br>
+				Residence:<input type="residence" id="residence" value="Pittsburgh, Pa"> <br> <br>
+				Message: <br> 
+
+				<textarea id="message" name="message" rows="15">
+  				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+  				</textarea>
+				<br> <br>
+				<button onclick="myFunction()">Update Information</button>
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Mayor: Bill Peduto <br>
+					Pittsburgh Mayor, Executive Assistant: James Hill
+				</h2>
+				<p>
+					<a href="tel:4122552133" >Peduto: 412.255.2133</a> <br>
+					<a href="tel:4122552696">Hill: 412.255.2696</a> <br>
+					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">james.hill@pittsburghpa.gov</a>
+					
+
+				</p>
+				  <br><br><p class="body"> </p>
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Chief of Staff: <br> Dan Gilman	
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:daniel.gillman@pittsburghpa.gov?">daniel.gillman@pittsburghpa.gov	</a>
+					<br>
+					<a href="tel:4122552626" >412.255.2626</a>
+					  <br><br><p class="body"> </p>
+				</p>
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Deputy COS/Chief Equity Officer:  <br>Majestic Lane
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:majestic.lane@pittsburghpa.gov?">majestic.lane@pittsburghpa.gov</a>
+					<br>
+					<a href="tel:4122552608">412.255.2608</a> <br>
+					 <br> <br><p class="body"> </p>
+				</p>
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Public Safety Director:  <br>Wendell Hissrich  
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:wendell.hissrich@pittsburghpa.gov?">wendell.hissrich@pittsburghpa.gov</a>
+					<br>
+					<a href="tel:4122558615">412.255.8615</a>
+					  <br><br><p class="body"> </p>
+				</p>
+
+			</div>
+			<div>
+				<h2>
+					Pittsburgh City Controller:	 <br>Michael Lamb
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:info@lambforpa.com?">info@lambforpa.com</a>
+				</p>
+				 <br> <br><p class="body"> </p>
+
+			</div>
+			<div>
+				<h2>
+					Pittsburgh City Clerk:  <br>Brenda Pree   
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:brenda.pree@pittsburghpa.gov?">brenda.pree@pittsburghpa.gov</a>
+					<br>
+					<a href="tel:4122552138">412.255.2138</a>
+				</p>
+				 <br> <br><p class="body"> </p>
+
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Assistant City Clerk:  <br>Kimberly Clark-Baskin
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:james.hill@pittsburghpa.gov?">kim.clark-baskin@pittsburghpa.gov	</a>
+					<br>
+					<a href="tel:4122552132">412.255.2132</a>
+				</p>
+				  <br><br><p class="body"> </p>
+
+			</div>
+			<div>
+				<h2>
+					PA Allegheny County Rep, District 19:  <br>Hon. Jake Wheatley
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:repwheatley@pahouse.net?">repwheatley@pahouse.net</a>
+					<br>
+					<a href="tel:4124717760">412.471.7760</a>
+				</p>
+				  <br><br><p class="body"> </p>
+
+			</div>
+			<div>
+				<h2>
+					Pittsburgh Police Chief: <br>	Scott Schubert
+				</h2>
+				<p>
+					<a class="mailto" href="mailto:scott.schubert@pittsburghpa.gov?">scott.schubert@pittsburghpa.gov</a>
+					<br>
+					<a href="tel:4123237897">412.323.7897</a>
+				</p>
+				 <br> <br><p class="body"> </p>
+
+			</div>
+		</div>
+
+	</div>
+	
+	<a href="https://jsfiddle.net/Wijmo5/5f9d7cte/">CSS scroll snap</a></small>
+</div>
+<a href="https://mailgo.js.org?ref=codepen">mailgo.js.org</a></small>
+</div>
+</body>
+
+<script>
+
+	var name = '[name]';
+	var residence = '[residence]';
+	var msg = "I am contacting you today to let you know how I feel about the current events in our city. I stand in solidarity with the black lives matter movement and the protests that support it. The Pittsburgh Police have been abusing their power and I demand that they are held accountable for their actions. I demand a change that the Pittsburgh police must exhaust other means before shooting, shooting moving vehicles is banned, and that comprehensive reporting is required. "
+		+" %0D%0A" + 
+	    "Additionally, I support criminal justice reform, the call for civilian oversight of police, and allocation of taxpayer funds towards community efforts and organizations outside of the police forces in order to prevent police brutality and violence in the future. ";
+
+	function updateTheEmails(){
+		console.log('updating emails');
+		var x = document.getElementsByClassName("mailto");
+		var bodyElementList = document.getElementsByClassName("body");
+		var greeting = 'Hello,' +" %0D%0A" + 'My name is ' + name + ' and I am a resident of ' + residence + '.'
+		var msgInput = document.getElementById('message').value;
+		console.log(x.length);
+		bodyElementList[x.length-1].innerHTML = greeting + ' ' + msgInput;
+		for(var i=0; i <= x.length; i++){
+			hrefElement = x[i];
+			hrefString = x[i].getAttribute("href"); // sec/IF00.html
+			console.log(hrefString);
+			hrefElement.setAttribute("href", hrefString + '&subject=BLM and Pittsburgh Protests&body=' + greeting + ' '
+				+ msgInput +" %0D%0A" +  ' Sincerely, ' +" %0D%0A" + name);
+			bodyElementList[i].innerHTML = greeting + ' ' + msgInput;
+
+		}
+
+	}
+
+
+	function myFunction() {
+		name = document.getElementById("name").value;
+		residence = document.getElementById("residence").value;
+		updateTheEmails()
+	}
+
+	const init = function(){
+		document.getElementById("message").value = msg;
+		let items = document.querySelectorAll('section');
+		//cssScrollSnapPolyfill()
+		updateTheEmails()
+	}
+	init(); 
+
+</script>
+
+
+
+<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+
+
+</html>

@@ -1,0 +1,40 @@
+  /* FONTS */
+
+  @font-face{
+    font-family: Inconsolata;
+    src: url("../fonts/Inconsolata.otf");
+  }
+  
+  @font-face{
+    font-family: Village;
+    src: url("../fonts/Village-wLn3.ttf");
+  }
+  
+
+  #name {
+    font-family: Village;
+    color:#E399A3;
+    font-size: 900%;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  #title {
+    font-family: Inconsolata;
+    color:black;
+    font-size: 150%;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  #landing {
+      background-color: #F5EFF0;
+  }
+
+  html {
+
+  }
