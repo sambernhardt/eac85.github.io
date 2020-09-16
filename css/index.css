@@ -67,10 +67,28 @@
     position: relative;
     /* -webkit-text-stroke: 3px #CF651A ; /* width and color */
     font-family: Sekogure; color: #CF651A ;
+    margin-left: 5px;
+    margin-right: 5px;
  }
 
  .textbox {
     position: relative;
+    font-family: Inconsolata;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+
+ .name {
+  font-size: 20px;
+ }
+
+ #more_info{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width:100%;
+    background-image: url("../images/background_about.png");
+    
  }
 
   
