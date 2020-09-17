@@ -91,4 +91,33 @@
     
  }
 
+ td {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+ }
+
+
+/* Footer */
+
+footer {
+  font-family: Inconsolata;
+  background-color: #054C2E;
+  color: #F5EFF0;
+  padding: 30px;
+}
+
+.fa {
+  color: #F5EFF0;
+  background: #CF651A ;
+  padding: 10px;
+  font-size: 200px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
   
