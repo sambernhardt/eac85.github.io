@@ -39,7 +39,7 @@
   #name {
     font-family: Village;
     color:#E399A3;
-    font-size: 900%;
+    font-size: 15vw;
     position: absolute;
     top: 30%;
     left: 30%;
@@ -49,7 +49,7 @@
   #title {
     font-family: Inconsolata;
     color:black;
-    font-size: 150%;
+    font-size: 2vw;
     position: absolute;
     top: 60%;
     left: 45%;
@@ -96,6 +96,39 @@
     padding-bottom: 50px;
 
  }
+
+
+ .parallax-secongg {
+    top:0;
+    position: relative;
+    /* Set a specific height */
+    height: 20vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:  80% ;
+    background-repeat: no-repeat;
+    background-size: 40vh;
+}
+
+
+.parallax-second {
+    
+    /* Set a specific height */
+    height: 100vh;
+
+    top: 10px;
+    height: 250vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:  100% ;
+    background-repeat: no-repeat;
+    background-size: 80vh;
+}
+
+#quote {
+  font-size: 10vw;
+}
+  
 
 
 /* Footer */
