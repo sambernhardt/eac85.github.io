@@ -153,4 +153,10 @@ footer {
 a, a:visited {
   text-decoration: none;
 }
+
+#contact-me {
+  font-size: 1vw;
+  color: #F5EFF0;
+}
+
   
