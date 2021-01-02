@@ -60,6 +60,11 @@
     transform: translate(-50%, -50%);
   }
 
+  .title {
+    font-family: Inconsolata;
+    color:black;
+  }
+
   #icons {
     font-size: 1vw;
     display: none;
@@ -116,15 +121,14 @@
   #experience {
     width: 50%;
     text-align: right;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 45%;
+    padding-left: 100px;
   }
 
-  td {
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-  }
+ td.img {
+    width: 10vw;
+ }
 
 
   /* Portfolio */
@@ -151,17 +155,6 @@
   }
   
 
-
-  /* Footer */
-
-  footer {
-    font-family: Inconsolata;
-    background-color: #054C2E;
-    color: #F5EFF0;
-    padding: 30px;
-    bottom: 0;
-    width: 100%;
-  }
 
   .fa {
     color: #F5EFF0;
