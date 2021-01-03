@@ -1,3 +1,6 @@
+  body {
+    width: 100%;
+  }
   /* FONTS */
 
   @font-face{
@@ -39,7 +42,7 @@
   #name {
     font-family: Village;
     color:#E399A3;
-    font-size: 13vw;
+    font-size: clamp(5rem, 13vw, 3rem);
     position: fixed;
     top: 30%;
     left: 30%;
@@ -63,6 +66,7 @@
   .title {
     font-family: Inconsolata;
     color:black;
+    font-size: clamp(.95rem, 1vw, 2rem);
   }
 
   #icons {
@@ -89,20 +93,22 @@
     font-family: Sekogure; color: #CF651A ;
     margin-left: 5px;
     margin-right: 5px;
+    padding-top: 20px;
   }
 
   .textbox {
     position: relative;
     font-family: Inconsolata;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 2px;
+    font-size: clamp(1rem, 1.2vw, 2rem);
   }
 
   .name {
-    font-size: 20px;
+    font-size: clamp(1.5rem, 1.5vw, 3rem);
   }
 
   #name1{
+     font-size: clamp(3rem, 6vw, 2rem); 
      transition:font-size 2s;
      -moz-transition:font-size 2s; /* Firefox 4 */
      -webkit-transition:font-size 2s; /* Safari and Chrome */
@@ -119,16 +125,23 @@
   }
 
   #experience {
-    width: 50%;
     text-align: right;
     margin-left: 20%;
-    margin-right: 45%;
+    margin-right: clamp(0rem, 22vw, 3rem);
     padding-left: 100px;
   }
 
- td.img {
-    width: 10vw;
- }
+  #projects {
+    margin: 0 auto; 
+    width: 100%;
+    text-align: right;
+    margin-left: 20%;
+    margin-right: clamp(0rem, 22vw, 3rem);
+  }
+
+
+  
+
 
 
   /* Portfolio */
@@ -148,31 +161,21 @@
     background-size: 80vh;
   }
 
-  #quote {
-    font-size: 10vw;
-    position: relative;
-    background-image: url("../images/background3.png");
-  }
-  
-
 
   .fa {
+    transition: background 1.5s, color 1.5s;
     color: #F5EFF0;
     background: #054C2E ;
     padding: 10px;
-    font-size: 200px;
+    font-size: clamp(3rem, 2.5vw, 2rem);
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    size: clamp(3rem, 2.5vw, 2rem);
   }
 
   a, a:visited {
     text-decoration: none;
-  }
-
-  #contact-me {
-    font-size: 12px;
-    color: #F5EFF0;
   }
 
   #portfolio img {
@@ -182,4 +185,17 @@
   #portfolio {
    background-color:  #F5EFF0;
  }
+
+ .portfolio-icon {
+    width: clamp(15rem, 20vw, 30rem);
+    transition: opacity .3s, filter 1.5s;
+    
+ }
+
+ .portfolio-icon:hover {
+    opacity: 1;
+    filter: grayscale(100%); 
+ }
+
+
 
