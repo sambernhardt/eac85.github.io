@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Emery Chew </title>
+	<link rel="stylesheet" type="text/css" href="css/fadein.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+	
+	<div id = "animated-icons">
+		<div id="discoball"> <img src="images/discoball.png" height="500" > </div>
+		<div id="sewingmachine"> <img src="images/sewingmachine.png" height="500" > </div>
+		<img id="cowboyhat" src="images/cowboyhat.png" height="500" >
+	<div>
+	
+
+
+	
+</body>
+<script type="text/javascript">
+	window.onload = flashIcons();
+
+	function flashIcons(){
+		var disco = document.getElementById("discoball");
+		var sewing = document.getElementById("sewingmachine");
+		var cowboyhat = document.getElementById("cowboyhat");
+		array = [disco, sewing, cowboyhat];
+		var count = 0;
+		array[count].style.display = "inline";
+		var interval = setInterval(function(){ 
+			alert(count);
+			if(count < array.length){
+				temp = count + 1;
+				array[count].style.display = "inline";
+				array[temp].style.display = "none";
+			}
+			if(count > array.length){
+				clearInterval(interval);
+				cowboyhat.style.display = "None";
+			}
+			count++;
+		}, 3000);
+	} 
+
+	function flash(element){
+		element.style.backgroundColor = "orange";
+	}
+
+</script>
+</html>
