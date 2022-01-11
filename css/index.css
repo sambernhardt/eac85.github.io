@@ -235,7 +235,25 @@
   .project-img {
     width: 65%;
     border-radius: 5%;
-    padding: 30px;
+  }
+
+  .project-img:hover {
+    transform: translate(0px, -10px);
+    -webkit-transition: transform 2s ease-in-out;
+  }
+
+  figure {
+    padding: 50px;
+  }
+
+  figcaption {
+    font-family: Sekogure;
+
+  }
+
+  .app-name {
+    font-size: 20px;
+    font-family: Village;
   }
 
 
