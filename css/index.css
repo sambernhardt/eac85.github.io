@@ -106,6 +106,10 @@
     text-align: center;
   }
 
+  a:visited {
+    text-decoration: none;
+  }
+
   .fa:hover{
     color: #054C2E ;
     background: #F5EFF0;
@@ -216,24 +220,24 @@
     text-decoration: none;
   }
 
-  #portfolio img {
-    visibility: hidden;
+  .portfolio-container {
+    width:  100%;
+    top-padding: 250px;
   }
 
-  #portfolio {
-   background-color:  #F5EFF0;
- }
+  .portfolio-background {
+    float: right;
+    border-radius: 5%;
+    width:  75%;
+    text-align: center;
+  }
 
- .portfolio-icon {
-    width: clamp(15rem, 20vw, 30rem);
-    transition: opacity .3s, filter 1.5s;
-    
- }
+  .project-img {
+    width: 65%;
+    border-radius: 5%;
+    padding: 30px;
+  }
 
- .portfolio-icon:hover {
-    opacity: 1;
-    filter: grayscale(100%); 
- }
 
  /* contact */
  input[type=text], select, textarea {
@@ -265,6 +269,9 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
+
+
+
 
 
 
