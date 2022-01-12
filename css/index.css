@@ -135,7 +135,7 @@
     position: relative;
     font-family: Inconsolata;
     margin-left: 2px;
-    font-size: clamp(2rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2rem);
   }
 
   .name {
@@ -289,6 +289,9 @@ input[type=submit]:hover {
 }
 
 
+#exampleModalCenter{
+  width:  100%;
+}
 
 
 

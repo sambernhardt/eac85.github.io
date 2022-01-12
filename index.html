@@ -6,9 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 
 
 </head>
@@ -23,96 +24,82 @@
 					<div id="title"> // software engineer</div>
 					<div id="icons">
 						<div class="title"> // software engineer </div> <br>
-						<a href="https://github.com/eac85" target="_blank" class="fa fa-info-circle fa-2x"></a>
-						<a href="https://www.linkedin.com/in/emery-chew-20bb9a148/" target="_blank" class="fa fa-linkedin fa-2x"></a>
-						<a href="https://github.com/eac85" target="_blank" class="fa fa-github fa-2x"></a>
-						<a href="mailto:emannchew@gmail.com" target="_blank" class="fa fa-envelope fa-2x"></a>
+						<a data-toggle="modal" data-target="#exampleModalCenter" target="_blank" class="fa fa-info-circle fa-2x"></a>
+						<a href="https://www.linkedin.com/in/emery-chew-20bb9a148/" target="_blank" class="fa fa-linkedin fa-2x"></button>
+							<a href="https://github.com/eac85" target="_blank" class="fa fa-github fa-2x"></a>
+							<a href="mailto:emannchew@gmail.com" target="_blank" class="fa fa-envelope fa-2x"></a>
+						</div>
 					</div>
+
+					<!--</div> -->
 				</div>
-
-				<!--</div> -->
-			</div>
-		</div>
-
-		<div class="about-me-parallax" class="container-fluid" id="more_info" style="padding-top: 50px;">
-			<div class="row" id="experience" class="animate__animated animate__fadeIn animate__slower">
-				
-				<p class="textbox"> 
-					I am a software engineer based in Philadelphia. I enjoy getting lost in the creation of new things and using tech to assist me. Whether I am designing a personal workout program in Java, coding a Twitter bot in python, or upating my website, I am constantly designing and learning. 
-				</p>
-
-				<p class="textbox">
-					I received my Bachelor's Degree in Computer Science from the University of Pittburgh. I worked on various projects that involved network security, operating systems, web development, quality assurance, and complex algorithms. After graduating, I was hired by McKesson Corp's development and defect team where I work primarily in Java and SQL to work on their pharmaceutical software. I fix bugs and implement new features in an agile environment.
-				</p>
-
-				<!--<p class="textbox"> 
-					i'm currently listening to: 
-				</p> -->
-
 			</div>
 
-			<div class="portfolio-container"> 
-				<div class="portfolio-background">
 
-					<figure>
-					<a href="http://emerychew.com/contact-pgh-reps/"> <img class="project-img" src="images/ContactReps.png" alt="website for contacting Pittsburgh Reps"> </a>
-					</figure>
+			<div class="about-me-parallax" class="container-fluid" id="more_info" style="padding-top: 50px;">
 
-					<figure>						
-					<a href="https://fathomless-falls-04734.herokuapp.com/"> <img class="project-img" src="images/sentence-stem.png" alt="website for completing sentence stems"> </a> 
-					</figure>
+				<div class="portfolio-container"> 
+					<div class="portfolio-background">
 
-					<figure>						
-					<a href="http://emerychew.com/tps-girlswhocode/"> <img id="project-img" class="project-img" src="images/tps-gwc.png" alt="website for TPS Girls Who Code club"> </a>
-					</figure>
+						<figure>
+							<a href="http://emerychew.com/contact-pgh-reps/"> <img class="project-img" src="images/ContactReps.png" alt="website for contacting Pittsburgh Reps"> </a>
+						</figure>
 
-					<figure>						
-					<img class="project-img" src="images/3DCopySystems.png" alt="web application for company importing photos"> 
-					</figure>
+						<figure>						
+							<a href="https://fathomless-falls-04734.herokuapp.com/"> <img class="project-img" src="images/sentence-stem.png" alt="website for completing sentence stems"> </a> 
+						</figure>
+
+						<figure>						
+							<a href="http://emerychew.com/tps-girlswhocode/"> <img id="project-img" class="project-img" src="images/tps-gwc.png" alt="website for TPS Girls Who Code club"> </a>
+						</figure>
+
+						<figure>						
+							<img class="project-img" src="images/3DCopySystems.PNG" alt="web application for company importing photos"> 
+						</figure>
 
 					<!--<img class="project-img" src="images/icons/hiit-generator.png" alt="web application for generating Hiit workouts"> 
 
-					<a href="./Lawrenceville"> <img class="project-img" src="images/icons/lawrenceville.png" alt="website for Pittsburgh neighborhood Lawrenceville"> </a>  -->
+						<a href="./Lawrenceville"> <img class="project-img" src="images/icons/lawrenceville.png" alt="website for Pittsburgh neighborhood Lawrenceville"> </a>  -->
 
 
-					
+						
+
+					</div>
+				</div>
+
+
+				<div class="row" id="contact" class="animate__animated animate__fadeIn animate__slower">
+					<h4 class="header" > contact </h4>
+					<p class="textbox"> 
+						<h3>Contact Form</h3>
+
+						<div class="container">
+							<form action="/action_page.php">
+								<label for="fname">First Name</label>
+								<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+								<label for="lname">Last Name</label>
+								<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+								<label for="country">Country</label>
+								<select id="country" name="country">
+									<option value="australia">Australia</option>
+									<option value="canada">Canada</option>
+									<option value="usa">USA</option>
+								</select>
+
+								<label for="subject">Subject</label>
+								<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+								<input type="submit" value="Submit">
+							</form>
+						</div>
+					</p>
 
 				</div>
 			</div>
 
-
-			<div class="row" id="contact" class="animate__animated animate__fadeIn animate__slower">
-				<h4 class="header" > contact </h4>
-				<p class="textbox"> 
-					<h3>Contact Form</h3>
-
-					<div class="container">
-						<form action="/action_page.php">
-							<label for="fname">First Name</label>
-							<input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-							<label for="lname">Last Name</label>
-							<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-							<label for="country">Country</label>
-							<select id="country" name="country">
-								<option value="australia">Australia</option>
-								<option value="canada">Canada</option>
-								<option value="usa">USA</option>
-							</select>
-
-							<label for="subject">Subject</label>
-							<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-							<input type="submit" value="Submit">
-						</form>
-					</div>
-				</p>
-
-			</div>
-		</div>
-
-		
+			
 
 
 
@@ -131,50 +118,87 @@
 			</p>
 		</div> -->
 
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalTitle"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" >
+						<div class="row" id="experience" class="animate__animated animate__fadeIn animate__slower">
+							
+							<p class="textbox"> 
+								I am a software engineer based in Philadelphia. I enjoy getting lost in the creation of new things and using tech to assist me. Whether I am designing a personal workout program in Java, coding a Twitter bot in python, or upating my website, I am constantly designing and learning. 
+							</p>
+
+							<p class="textbox">
+								I received my Bachelor's Degree in Computer Science from the University of Pittburgh. I worked on various projects that involved network security, operating systems, web development, quality assurance, and complex algorithms. After graduating, I was hired by McKesson Corp's development and defect team where I work primarily in Java and SQL to work on their pharmaceutical software. I fix bugs and implement new features in an agile environment.
+							</p>
+
+				<!--<p class="textbox"> 
+					i'm currently listening to: 
+				</p> -->
+
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>
+</div>
 
 
 
-	</body>
 
-	<script type="text/javascript">
+</body>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-		$(function(){
-			$(window).scroll(function() {
-
-				var landingHeight = $('#landing').height();
-				var landingHeight50 = landingHeight * 0.5;
-				var name1 = document.getElementById("name1");
-				var name = document.getElementById("name");
-
-				var title = document.getElementById("title");
-				var icons = document.getElementById("icons");
+<script type="text/javascript">
 
 
-				if (document.body.scrollTop > landingHeight50 || document.documentElement.scrollTop > landingHeight50){
-					if(document.body.clientWidth < 700){
-						name1.style.fontSize = "6vh";
-					}
-					else {
-						name1.style.fontSize = "6vw";
-					}
-					name.style.left = "1%";
-					title.style.display = "none";
-					icons.style.display = "block";
-				} 
-				else {
-					name1.style.fontSize = "13vw";
-					title.style.display = "block";
-					icons.style.display = "none";
-					name.style.left = "10%";
+	$(function(){
+		$(window).scroll(function() {
+
+			var landingHeight = $('#landing').height();
+			var landingHeight50 = landingHeight * 0.5;
+			var name1 = document.getElementById("name1");
+			var name = document.getElementById("name");
+
+			var title = document.getElementById("title");
+			var icons = document.getElementById("icons");
+
+
+			if (document.body.scrollTop > landingHeight50 || document.documentElement.scrollTop > landingHeight50){
+				if(document.body.clientWidth < 700){
+					name1.style.fontSize = "6vh";
 				}
+				else {
+					name1.style.fontSize = "6vw";
+				}
+				name.style.left = "1%";
+				title.style.display = "none";
+				icons.style.display = "block";
+			} 
+			else {
+				name1.style.fontSize = "13vw";
+				title.style.display = "block";
+				icons.style.display = "none";
+				name.style.left = "10%";
+			}
 
-			});
 		});
+	});
 
 
 
 
-	</script>
+</script>
 
-	</html>
+</html>
