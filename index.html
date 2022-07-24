@@ -12,17 +12,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 
 	<style>
+		body {
+			background-color: #F5EFF0;
+		}
 		.about {
 			padding: 50px;
 			margin: 40px;
 			margin-top: 0px;
 			margin-bottom: 0px;
-			font-size: clamp(2.3vw, 2.3vw, 2rem); 
-     		transition:font-size 2s;
-     		-moz-transition:font-size 2s; /* Firefox 4 */
-     		-webkit-transition:font-size 2s; /* Safari and Chrome */
-     		-o-transition:font-size 2s;
-     		font-family:  Inconsolata;
+			font-size: clamp(18px, 2.5vw, 2.5vw); 
+			transition:font-size 2s;
+			-moz-transition:font-size 2s; /* Firefox 4 */
+			-webkit-transition:font-size 2s; /* Safari and Chrome */
+			-o-transition:font-size 2s;
+			font-family:  Inconsolata;
 		}
 
 		a.link{
@@ -33,23 +36,52 @@
 		.name: hover {
 			color:  pr;
 			-moz-transition:color 2s; /* Firefox 4 */
-     		-webkit-transition:color 2s; /* Safari and Chrome */
-     		-o-transition:color 2s;
+			-webkit-transition:color 2s; /* Safari and Chrome */
+			-o-transition:color 2s;
 
+		}
+
+		a:visited {
+			text-decoration: none;
+		}
+
+		.name1{
+			color:  black;
+			text-decoration: none;
+			text-align: center;
+			font-size: clamp(13vw, 13vw, 2rem); 
+			transition:font-size 2s;
+			-moz-transition:font-size 2s; /* Firefox 4 */
+			-webkit-transition:font-size 2s; /* Safari and Chrome */
+			-o-transition:font-size 2s;
+		}
+
+		.link_name {
+			color:  black;
+			text-decoration: none;
+		}
+
+		.link_name:hover {
+			color:  #044C2E;
+			text-decoration: none;
 		}
 
 	</style>
 </head>
 <body>
 	<div  style="background-color:#F5EFF0;height:100vh">
-		<div id="name1" style="text-align:center;">emery chew</div>
-		<div class="about"> Hey! I am a software engineer based in Philadelphia, Pennsylvania. I am currently working at McKesson, but love to pick up side projects. Here you can check out my <a class="link" href="http://emerychew.com/portfolio.html"> PORTFOLIO.</a>
-		<br> 
-		You can poke around on my <a class="link" href="https://instagram.com/ehmuree"> SOCIAL MEDIA, </a> reach out to me on <a class="link" href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> LINKED IN, </a> or shoot me an <a class="link" href="mailto:emannchew@gmail.com"> EMAIL. </a>
+		<div class="name1 link"> <a class="link_name" href="http://emerychew.com">emery chew</a> </div>
+		<div class="about"> 
+
+			Hi! I am Emery and I am based in Philadelphia, Pennsylvania. I am a professional software engineer and an amateur sewist, vegan baker, rollerblader, and painter. More <a class="link" href="http://emerychew.com/portfolio.html"> ABOUT ME </a> here.
+
+			<br>I am currently working at McKesson, but I love to pick up side projects. This is my <a class="link" href="http://emerychew.com/portfolio.html"> PORTFOLIO.</a>
+			<br> 
+			You can poke around on my <a class="link" href="https://instagram.com/ehmuree"> SOCIAL MEDIA,</a> reach out to me on <a class="link" href="https://www.linkedin.com/in/emery-chew-20bb9a148/"> LINKED IN,</a> or shoot me an <a class="link" href="mailto:emannchew@gmail.com"> EMAIL. </a>
 			
 
 
-			 </div>
+		</div>
 	</div>
 </body>
 </html>

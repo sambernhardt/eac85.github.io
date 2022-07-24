@@ -1,68 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Emery Chew </title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+
+	<style>
+
+		body {
+			background-color: #F5EFF0;
+		}
+		.about {
+			padding: 50px;
+			margin: 40px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-size: clamp(18px, 2.5vw, 2.5vw); 
+			transition:font-size 2s;
+			-moz-transition:font-size 2s; /* Firefox 4 */
+			-webkit-transition:font-size 2s; /* Safari and Chrome */
+			-o-transition:font-size 2s;
+			font-family:  Inconsolata;
+		}
+
+		a.link{
+			font-family: Sekogure;
+			color: #E399A3;
+		}
+
+		.name: hover {
+			color:  pr;
+			-moz-transition:color 2s; /* Firefox 4 */
+			-webkit-transition:color 2s; /* Safari and Chrome */
+			-o-transition:color 2s;
+
+		}
+
+		.link_name:hover {
+			color:  #044C2E;
+			text-decoration: none;
+		}
+
+		.name1{
+			color:  black;
+			text-decoration: none;
+			text-align: center;
+			font-size: clamp(13vw, 13vw, 2rem); 
+			transition:font-size 2s;
+			-moz-transition:font-size 2s; /* Firefox 4 */
+			-webkit-transition:font-size 2s; /* Safari and Chrome */
+			-o-transition:font-size 2s;
+		}
+
+	</style>
 </head>
 <body>
-
-
-		<div id="page">
-			<h1 class="title"> Emery Chew </h1> 
-			<nav> 
-				<ul>
-				  <li><a href="about.html">About</a></li>
-				  <li><a href="about.html">Experience</a></li>
-				  <li><a href="about.html">Skills</a></li>
-				  <li><a href="portfolio.html"> Projects </a> </li>
-				  <li> <a href="RESUME2-26.pdf" download="EmeryChewResume"> Resume </a> </li>
-				</ul>
-			</nav>
-		</div>
-
-		<div id="about" > 
-			<h4> about </h4>
-			<p class="textbox"> 
-				I am a student at the University of Pittsburgh in my last semester of obtaining a Bachelor of Science in Computer Science. My most proficient languages are Java and Python. I have worked on large projects in both languages. I currently work at my university's IT help desk and I have interned as a software engineer at Bentley Systems where I worked on a code playground to be hosted on the company's website. I have experience with web development. I have done freelance work with creating an HTTP server in Python by using HTML and Javascript.
-			</p>
-		</div>
-
-		<div id="experience" >
-			<h4> experience </h4> 
-			<p class="textbox"> 
-				<a href="https://imodeljs.github.io/iModelJs-docs-output/learning/codeplaygrounds/?term=play"> <strong class="name"> Bentley Systems </strong> </a>  I enhanced the company's website by developing a code playground for their iModelJS team. The iModelJS team is responsible for managing a javascript library that accompanies their software for infrastructure. The code playground's purpose is to draw more customers into the website to learn more about their library and what their software can do. It will also be used in tutorials to teach their users more about how to incorporate all their libraries.
+	<div  style="background-color:#F5EFF0;height:100vh">
+		<div class="name1 link"> <a class="link_name" href="http://emerychew.com">emery chew</a> </div>
+		<div class="about">
+		<p > 
+				I am a software engineer based in Philadelphia. I enjoy getting lost in the creation of new things and using tech to assist me. Whether I am designing a personal workout program in Java, coding a Twitter bot in python, or upating my website, I am constantly designing and learning. 
 			</p>
 
-			<p class="textbox"> 
-				<strong class="name"> Dietrich School of Arts and Sciences </strong> Assist faculty and staff of the University of Pittsburgh with desktop I.T.
-				problems. I have lead several projects that introduced new software to our users, while organizing other students.
+			<p >
+				I received my Bachelor's Degree in Computer Science from the University of Pittburgh. I worked on various projects that involved network security, operating systems, web development, quality assurance, and complex algorithms. After graduating, I was hired by McKesson Corp's development and defect team where I work primarily in Java and SQL to work on their pharmaceutical software. I fix bugs and implement new features in an agile environment.
 			</p>
 		</div>
-
-		<div id="skills"> 
-			<h4> skills </h4>
-			<p class="textbox"> 
-				<div id="skills" style="width: 600px"> </div>
-				
-			</p>
-		</div>
-
-
-	
+</div>
+</div>
 </body>
-<script type="text/javascript">
-	/*var data = [{
-	  x: [6, 8, 4, 8],
-	  y: ['python ', 'java ', 'C ', 'HTML '],
-	  type: 'bar',
-	  marker: {
-	    color: 'rgb(142,124,195)'
-	  },
-	  orientation: 'h'
-	}];
-
-
-	Plotly.newPlot('skills', data, {}, {showSendToCloud:true});*/
-</script>
 </html>
+
+
+
