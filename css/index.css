@@ -31,7 +31,7 @@
     height: 250vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:  100% ;
+    background-position: 100% 0%;
     background-repeat: no-repeat;
     background-size: 80vh;
   }
